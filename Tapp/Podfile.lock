@@ -1,15 +1,54 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.5.1)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - FlatButton (1.2)
+  - KeychainAccess (3.2.0)
+  - PromiseKit (4.5.1):
+    - PromiseKit/Foundation (= 4.5.1)
+    - PromiseKit/QuartzCore (= 4.5.1)
+    - PromiseKit/UIKit (= 4.5.1)
+  - PromiseKit/CorePromise (4.5.1)
+  - PromiseKit/Foundation (4.5.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.1):
+    - PromiseKit/CorePromise
+  - SwiftWebSocket (2.6.5)
   - SwiftyJSON (3.1.4)
+  - TeslaSwift (4.1.4):
+    - PromiseKit/CorePromise (~> 4.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.3)
+  - Alamofire
+  - AlamofireImage
+  - FlatButton
+  - KeychainAccess
+  - PromiseKit
+  - SwiftWebSocket
   - SwiftyJSON
+  - TeslaSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - FlatButton
+    - KeychainAccess
+    - PromiseKit
+    - SwiftWebSocket
+    - SwiftyJSON
+    - TeslaSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  FlatButton: 9995b972cd520be091f0ba6b215b84cbe7d46fa8
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  PromiseKit: 445dac9b2c3c3b4b31b5f842bc325700b848a8bd
+  SwiftWebSocket: 1ef8a0efb023544643bdf480c1ec4a62b204f293
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TeslaSwift: 0cab57d3e0a5fd78582933f17e3e09b27d018887
 
-PODFILE CHECKSUM: a5bcd8879b565c8f39b4c0a3689e9a41a75ca174
+PODFILE CHECKSUM: e991ced9a760195d3bccfd3b9ca17f46076ec0dc
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.2

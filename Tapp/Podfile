@@ -1,8 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :osx, '10.12'
+platform :osx, '10.14'
 use_frameworks!
-project '/Users/gra/Documents/Tapp/Tapp.xcodeproj'
+project '../Tapp.xcodeproj'
 target 'Tapp' do
-    pod 'Alamofire', '~> 4.3'
+    pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'AlamofireImage'
+    pod 'SwiftWebSocket'
+    pod 'KeychainAccess'
+    pod 'FlatButton'
+    pod 'PromiseKit'
+    pod 'TeslaSwift'
 end

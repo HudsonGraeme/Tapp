@@ -2,25 +2,44 @@
 //  AppDelegate.swift
 //  Tapp
 //
-//  Created by s on 2017-01-06.
-//  Copyright © 2017 Carspotter Daily. All rights reserved.
-//
+//  Created by Hudson Graeme on 2017-01-06.
+//  
 
 import Cocoa
+import KeychainAccess
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+ 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+ 
+    let keychain = Keychain(service: "HudsonGraeme.Dev.Tapp")
+        public func cData() {
+        print("Hello!")
+        do {
+            try keychain.removeAll()
+            }
+        catch {
+            print("Keychain couldn't delete any data")
+        }
+            
+        if let bundleID = Bundle.main.bundleIdentifier {
+                UserDefaults.standard.removePersistentDomain(forName: bundleID)
+        }
+            
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        NSApplication.shared.registerForRemoteNotifications(matching: .alert)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        exit(0);
     }
-
+    
 
 }
 
