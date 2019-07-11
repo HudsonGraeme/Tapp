@@ -598,7 +598,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
-				INFOPLIST_FILE = TappTests/Info.plist;
+				INFOPLIST_FILE = Tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carspotter.Daily.TappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
