@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="620" height="486"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" id="f0t-i1-tfb">
-                                    <rect key="frame" x="1" y="1" width="603" height="484"/>
+                                    <rect key="frame" x="1" y="1" width="618" height="484"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="qPI-FY-ghB">
@@ -89,7 +89,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ufK-mb-oie">
-                                    <rect key="frame" x="604" y="1" width="15" height="484"/>
+                                    <rect key="frame" x="603" y="1" width="16" height="484"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -302,7 +302,7 @@
                                         <rect key="frame" x="52" y="54" width="240" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <clipView key="contentView" id="wu4-O1-8KM">
-                                            <rect key="frame" x="0.0" y="0.0" width="225" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="gcu-SM-ymw">
@@ -331,7 +331,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="AEp-dc-Zeu">
-                                            <rect key="frame" x="225" y="0.0" width="15" height="35"/>
+                                            <rect key="frame" x="224" y="0.0" width="16" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -532,30 +532,21 @@
         <scene sceneID="phH-v9-npF">
             <objects>
                 <viewController title="Proxy Connection" id="XD2-PE-a6e" customClass="ProxyHandler" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="zBw-MR-rAv">
+                    <visualEffectView key="view" appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" id="YnZ-G9-Mom">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="hex-Y0-eoZ">
-                                <rect key="frame" x="76" y="184" width="213" height="22"/>
+                                <rect key="frame" x="76" y="190" width="213" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Proxy Host" bezelStyle="round" id="8u3-6V-Wsk">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" id="Hpa-81-dnx">
-                                <rect key="frame" x="297" y="184" width="78" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Proxy Port" bezelStyle="round" id="C2m-yL-caM">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Host" bezelStyle="round" id="8u3-6V-Wsk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" id="gwX-MT-DrU">
-                                <rect key="frame" x="76" y="139" width="299" height="22"/>
+                                <rect key="frame" x="76" y="149" width="299" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" bezelStyle="round" id="tlp-SM-KYg">
                                     <font key="font" metaFont="system"/>
@@ -564,7 +555,7 @@
                                 </textFieldCell>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" id="JZG-Rs-FZx">
-                                <rect key="frame" x="76" y="96" width="299" height="22"/>
+                                <rect key="frame" x="76" y="111" width="299" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" usesSingleLineMode="YES" bezelStyle="round" id="JVG-Fu-mDn">
                                     <font key="font" metaFont="system"/>
@@ -576,7 +567,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="hqh-OP-FXn">
-                                <rect key="frame" x="106" y="244" width="239" height="36"/>
+                                <rect key="frame" x="101" y="255" width="239" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Proxy Connection" id="0BS-aZ-YIR">
                                     <font key="font" metaFont="system" size="30"/>
@@ -585,11 +576,11 @@
                                 </textFieldCell>
                             </textField>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" id="1U4-1K-6b4">
-                                <rect key="frame" x="209" y="6" width="32" height="32"/>
+                                <rect key="frame" x="209" y="18" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <button verticalHuggingPriority="750" id="PsT-ZN-2O6">
-                                <rect key="frame" x="70" y="45" width="311" height="32"/>
+                                <rect key="frame" x="70" y="63" width="311" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <contentFilters>
                                     <ciFilter name="CIFalseColor">
@@ -605,17 +596,17 @@
                                     <font key="font" metaFont="systemMedium" size="15"/>
                                 </buttonCell>
                             </button>
+                            <textField verticalHuggingPriority="750" id="Hpa-81-dnx">
+                                <rect key="frame" x="297" y="190" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Port" bezelStyle="round" id="C2m-yL-caM">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
-                        <backgroundFilters>
-                            <ciFilter name="CIFalseColor">
-                                <configuration>
-                                    <ciColor key="inputColor0" red="0.29999999999999999" green="0.0" blue="0.0" alpha="1"/>
-                                    <ciColor key="inputColor1" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1"/>
-                                    <null key="inputImage"/>
-                                </configuration>
-                            </ciFilter>
-                        </backgroundFilters>
-                    </view>
+                    </visualEffectView>
                 </viewController>
                 <customObject id="F2Q-ag-BX8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -919,7 +910,7 @@
                                 <rect key="frame" x="20" y="38" width="410" height="242"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" id="cx8-Dz-8mP">
-                                    <rect key="frame" x="1" y="1" width="393" height="240"/>
+                                    <rect key="frame" x="1" y="1" width="408" height="240"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" usesFontPanel="YES" findStyle="panel" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="cRL-R1-x51">
@@ -939,7 +930,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="xE0-WU-Bes">
-                                    <rect key="frame" x="394" y="1" width="15" height="240"/>
+                                    <rect key="frame" x="393" y="1" width="16" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1085,7 +1076,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <secureTextField verticalHuggingPriority="750" id="zqW-dK-qR5">
-                                        <rect key="frame" x="20" y="133" width="410" height="22"/>
+                                        <rect key="frame" x="20" y="121" width="410" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Access Token" drawsBackground="YES" usesSingleLineMode="YES" id="88E-gs-1oG">
                                             <font key="font" metaFont="system"/>
@@ -1110,17 +1101,6 @@ DQ
                                             <action selector="login:" target="FQj-xb-KPZ" id="ZFM-Xl-Pxk"/>
                                         </connections>
                                     </button>
-                                    <button id="4a1-J3-EBD">
-                                        <rect key="frame" x="376" y="135" width="56" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Q44-JU-i2D">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="shwtk:" target="FQj-xb-KPZ" id="MaV-JK-Cig"/>
-                                        </connections>
-                                    </button>
                                     <button id="6Q3-UY-Rcg">
                                         <rect key="frame" x="376" y="188" width="56" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1141,7 +1121,7 @@ DQ
                                         </buttonCell>
                                     </button>
                                     <textField hidden="YES" verticalHuggingPriority="750" id="1PC-7E-6MO">
-                                        <rect key="frame" x="20" y="133" width="410" height="22"/>
+                                        <rect key="frame" x="20" y="121" width="410" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Access Token" id="3YV-JQ-2tG">
                                             <font key="font" metaFont="system"/>
@@ -1161,6 +1141,17 @@ DQ
                                             <segue destination="ZeJ-Yj-L2A" kind="show" identifier="logToVie" id="msp-YA-bkP"/>
                                         </connections>
                                     </textField>
+                                    <button id="4a1-J3-EBD">
+                                        <rect key="frame" x="376" y="123" width="56" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Q44-JU-i2D">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="shwtk:" target="FQj-xb-KPZ" id="MaV-JK-Cig"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </visualEffectView>
                         </subviews>

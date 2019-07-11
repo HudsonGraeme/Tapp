@@ -48,6 +48,7 @@ class SelectVehicle : NSViewController, NSTableViewDelegate {
 
     
     @objc func onItemClicked() {
+        
         CVD.SelectedVehicle = tableView.clickedRow
         self.performSegue(withIdentifier: "SelectToView", sender: self)
         self.view.window?.close()
@@ -167,7 +168,7 @@ class SelectVehicle : NSViewController, NSTableViewDelegate {
         image = item.image
         
         // 3
-        let cell = tableView.makeView(withIdentifier: convertToNSUserInterfaceItemIdentifier("VehicleCell"), owner: nil) as! NSTableCellView
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "VehicleCell"), owner: nil) as! NSTableCellView
             cell.textField!.stringValue = text
             cell.textField!.textColor = .white
             cell.imageView!.image = image
@@ -187,12 +188,4 @@ extension SelectVehicle: NSTableViewDataSource {
     
     
     
-}
-
-
-
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToNSUserInterfaceItemIdentifier(_ input: String) -> NSUserInterfaceItemIdentifier {
-	return NSUserInterfaceItemIdentifier(rawValue: input)
 }

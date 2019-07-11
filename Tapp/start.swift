@@ -20,14 +20,15 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
     let keychain = Keychain(service: "HudsonGraeme.Dev.Tapp")
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NSUserNotificationCenter.default.delegate = self
         print(currentSSIDs().first)
         let SSID = currentSSIDs().first
         self.tapp.font = NSFont(name: "KaushanScript-Regular", size: 72.0)
-        let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject
+        var version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]
+        version = version.replacingCharacters(in: NSRange(location: 3, length: 1), with: "")
         let versio = (nsObject as! NSString).replacingCharacters(in: NSRange(location: 3, length: 1), with: "") as NSString
         
-        let version = versio.doubleValue
         print(version)
         _ = Alamofire.request(URL(string: "http://api.carspotter.ca/index.php/Applications?transform=1")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: CVD.headers).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
             
@@ -56,46 +57,6 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
                 }
             }
         }
-        /*if(UserDefaults.standard.string(forKey: SSID) != nil) {
-            print("known network")
-            
-            let KnownNetwork = UserDefaults.standard.string(forKey: SSID)!
-            if(KnownNetwork != "Safe") {
-                performSegue(withIdentifier: "ShowProxy", sender: self)
-            }
-        }
-        else {
-            
-            let response = self.Alert("New Network Detected", "Is the network " + SSID + " a network you would consider safe?", .informational , 3 , ["No", "Maybe", "Yes"])
-            if response == 1000 {
-                print("Yes")
-                CVD.SSIDs[SSID] = "Safe"
-                if(UserDefaults.standard.integer(forKey: "SaveNetwork") == NSOnState) {
-                UserDefaults.standard.set("Safe", forKey: SSID)
-                }
-            }
-            else if response == 1001 {
-                print("Maybe")
-                CVD.SSIDs[SSID] = "Unsafe"
-                if(UserDefaults.standard.integer(forKey: "SaveNetwork") == NSOnState) {
-                    UserDefaults.standard.set("Unsafe", forKey: SSID)
-                }
-                performSegue(withIdentifier: "ShowProxy", sender: self)
-            }
-            else if response == 1002 {
-                print("No")
-                CVD.SSIDs[SSID] = "Unsafe"
-                if(UserDefaults.standard.integer(forKey: "SaveNetwork") == NSOnState) {
-                    UserDefaults.standard.set("Unsafe", forKey: SSID)
-                }
-                performSegue(withIdentifier: "ShowProxy", sender: self)
-            }
-            else {
-                print("Response: ", response)
-            }
-            self.view.window?.setIsVisible(true)
-            print(CVD.SSIDs)
-        }*/
         if(!UserDefaults.standard.bool(forKey: "EULA") && !CVD.EULA) {
             
         } else {
@@ -125,28 +86,6 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
                 print("shmello")
                 CVD.SavedToken = false
             }
-        if(CVD.SavedToken == true) {
-            self.or.stringValue = ""
-            self.tapp.stringValue = "Welcome back!"
-            self.tapp.slideInFromLeft()
-            self.acctok.isHidden = true
-            self.password.isHidden = true
-            self.shwpswd.isHidden = true
-            self.visAcc.isHidden = true
-            self.acctok.isHidden = true
-            self.email.isHidden = true
-            self.shwtk.isHidden = true
-            self.stayLogged.slideInFromRight()
-        }
-        if(UserDefaults.standard.string(forKey: "Style") == nil) {
-        UserDefaults.standard.set("Dark", forKey: "Style")
-            CVD.Theme = NSColor.darkGray.cgColor
-        } else if(UserDefaults.standard.string(forKey: "Style") == "Light"){
-            CVD.Theme = NSColor.lightGray.cgColor
-        } else if(UserDefaults.standard.string(forKey: "Style") == "Disco") {
-            CVD.Theme = NSColor.systemBlue.cgColor
-        }
-        self.view.layer?.backgroundColor = CVD.Theme
     }
 }
     override func viewDidAppear() {
@@ -200,7 +139,6 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
     var vehicleAttempts = 0
     
     func getVehicles() {
-        let api = TeslaSwift()
         
         
         let url = URL(string:"https://owner-api.teslamotors.com/api/1/vehicles/")
@@ -462,42 +400,22 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
         ]
         print(token)
         let url = URL(string:"https://owner-api.teslamotors.com/api/1/vehicles/")
-        
-        let _ = Alamofire.request(url!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-            
-            }
-            .validate { request, response, data in
+        Alamofire.request(url!).responseVehicles(completionHandler: { response in
                 
-                return .success
-            }
-            .responseJSON { response in
-                
-                switch response.result {
+
                     
-                case .success:
-                    let data = response.result.value
-                    if data != nil {
-                        let json = JSON(data!)
-                        print(json)
-                        print("Token is all good")
-                        CVD.Token = token
-                        do {
-                            
-                            try self.keychain.set(token, key: "token")
-                        }
-                        catch {
-                            print("couldn't save keychain data")
-                        }
-                        self.getVehicles()
+                
+                    if let data = response.result.value {
+                        
                     }
-                case .failure:
+                    else {
                     print("Token Check failure")
                     self.or.textColor = NSColor.red
                     self.or.stringValue = "Invalid Token"
                     self.or.slideInFromRight()
                     self.acctok.resignFirstResponder()
-                }
-        }
+                    }
+        })
     
 }
     
@@ -530,7 +448,7 @@ class SplitView : NSSplitViewController {
     }
     var timer = Timer()
     
-    @objc func ReloadData(){
+    @objc func ReloadData() {
         print("SHMELLO")
         let vehicleid = CVD.vehicleIDs[CVD.SelectedVehicle]
         let url = URL(string:"https://owner-api.teslamotors.com/api/1/vehicles/\(vehicleid)/data")
