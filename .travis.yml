@@ -1,4 +1,5 @@
 language: swift
 os: osx
-xcode_workpace: ./Tapp/Tapp.xcworkspace # path to your xcodeproj folder
+xcode_project: ./Tapp/Tapp.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Tapp
+xcode_destination: macOS
