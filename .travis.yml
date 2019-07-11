@@ -1,6 +1,7 @@
 language: swift
 os: osx
-xcode_project: Tapp.xcodeproj # path to your xcodeproj folder
+xcode_project: ./Tapp/Tapp.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Tapp
+#xcode_workspace: ./Tapp/Tapp.xcworkspace
 xcode_destination: platform=macOS
-script: set -o pipefail && xcodebuild -project Tapp.xcodeproj -allowProvisioningUpdates -scheme TappTests -destination platform\=macOS build test | xcpretty
+podfile: ./Tapp/Podfile
