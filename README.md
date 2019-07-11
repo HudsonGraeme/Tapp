@@ -1,14 +1,12 @@
 
-# Tapp
-
-## July 11, 2019 UPDATE
+# Tapp [![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp)
 Hello first of all thanks for your continued support - it's very helpful!
 
 Working through a new data model; 2.5 features logo and UI redesign with Powerwall support
 
 Four years of Tapp :)
 
-[![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp)
+
 
 ## Public Release of Tapp
 Thanks for coming! While you're here, [have a look at Tapp's licensing](https://github.com/HudsonGraeme/Tapp2/blob/master/LICENSE).
