@@ -592,6 +592,7 @@
 		};
 		24F0F8D71E208AF100752B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
