@@ -3,7 +3,9 @@
 
 ## July 11, 2019 UPDATE
 Hello first of all thanks for your continued support - it's very helpful!
+
 Working through a new data model; 2.5 features logo and UI redesign with Powerwall support
+
 Four years of Tapp :)
 
 [![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp)
