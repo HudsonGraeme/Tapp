@@ -856,7 +856,6 @@
                         <outlet property="Logout" destination="FsH-s0-OVy" id="H87-mB-emm"/>
                         <outlet property="Settings" destination="Auf-fO-ZFx" id="67u-9H-fA3"/>
                         <outlet property="Tapp2" destination="yiu-dK-NbA" id="4Gc-bV-jqL"/>
-                        <segue destination="FQj-xb-KPZ" kind="show" identifier="BackToLogin" id="jk4-pl-wa9"/>
                     </connections>
                 </viewController>
                 <customObject id="sAM-31-N2G" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1016,7 +1015,6 @@
                         <outlet property="Decline" destination="WD5-A3-im7" id="5SH-H5-xZ4"/>
                         <outlet property="Remember" destination="sIM-MM-k5o" id="L4K-TK-guW"/>
                         <outlet property="TextView" destination="cRL-R1-x51" id="gTg-6H-MNo"/>
-                        <segue destination="FQj-xb-KPZ" kind="show" identifier="EULAToLogin" id="Gvm-38-ztR"/>
                     </connections>
                 </viewController>
                 <customObject id="SZP-z1-31p" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1027,12 +1025,12 @@
         <scene sceneID="Z7j-OV-EuN">
             <objects>
                 <customObject id="E16-N8-cK7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController title="Login" id="FQj-xb-KPZ" customClass="start" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="FQj-xb-KPZ" customClass="Login" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="BgC-g6-uQt">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="371"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="ultraDark" state="active" id="gum-nM-kEZ">
+                            <visualEffectView blendingMode="behindWindow" material="dark" state="active" id="gum-nM-kEZ">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -1097,9 +1095,6 @@
 DQ
 </string>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="login:" target="FQj-xb-KPZ" id="ZFM-Xl-Pxk"/>
-                                        </connections>
                                     </button>
                                     <button id="6Q3-UY-Rcg">
                                         <rect key="frame" x="376" y="188" width="56" height="18"/>
@@ -1108,9 +1103,6 @@ DQ
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="shwpswd:" target="FQj-xb-KPZ" id="6bp-DB-hKA"/>
-                                        </connections>
                                     </button>
                                     <button id="khb-Oh-oTZ">
                                         <rect key="frame" x="165" y="56" width="121" height="18"/>
@@ -1134,7 +1126,7 @@ DQ
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Tapp" id="W6o-qK-sWn">
                                             <font key="font" metaFont="systemThin" size="72"/>
-                                            <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="selectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </textFieldCell>
                                         <connections>
@@ -1148,9 +1140,6 @@ DQ
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="shwtk:" target="FQj-xb-KPZ" id="MaV-JK-Cig"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </visualEffectView>
@@ -1191,25 +1180,6 @@ AAAAAAEGA
                             <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="TZP-vY-GcR"/>
                         </touchBarItems>
                     </touchBar>
-                    <connections>
-                        <outlet property="Background" destination="gum-nM-kEZ" id="hDS-2v-jYS"/>
-                        <outlet property="acctok" destination="zqW-dK-qR5" id="GeE-N5-rTf"/>
-                        <outlet property="email" destination="5KT-Mv-elx" id="1GY-N8-6po"/>
-                        <outlet property="login" destination="bM4-yP-eQf" id="7US-gA-49T"/>
-                        <outlet property="or" destination="GJL-ef-zWQ" id="oIk-AO-nYk"/>
-                        <outlet property="password" destination="poh-Dy-tYq" id="BSy-HY-hR4"/>
-                        <outlet property="pswdcell" destination="BMz-0X-KeX" id="mtT-sX-Fsh"/>
-                        <outlet property="shwpswd" destination="6Q3-UY-Rcg" id="nfM-S7-Ypn"/>
-                        <outlet property="shwtk" destination="4a1-J3-EBD" id="zGB-2U-Se7"/>
-                        <outlet property="stayLogged" destination="khb-Oh-oTZ" id="gnL-hc-k2R"/>
-                        <outlet property="tapp" destination="V38-QU-Bpj" id="YQ9-3K-yqc"/>
-                        <outlet property="tkcell" destination="88E-gs-1oG" id="4gr-TD-hTY"/>
-                        <outlet property="visAcc" destination="1PC-7E-6MO" id="zX1-ca-sgJ"/>
-                        <outlet property="visPswd" destination="Leo-8J-W8B" id="4Di-38-Rej"/>
-                        <segue destination="XD2-PE-a6e" kind="show" identifier="ShowProxy" id="VVd-dD-IO1"/>
-                        <segue destination="Kly-wK-Q16" kind="show" identifier="LogToSelect" id="Wi6-0r-5o2"/>
-                        <segue destination="RGx-TL-Ire" kind="show" identifier="ToEULA" id="owP-Lw-aK5"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-2196" y="595.5"/>
@@ -1318,7 +1288,6 @@ AAAAAAEGA
                         <outlet property="LoadingText" destination="mud-FK-0Iu" id="P3g-Q6-Koa"/>
                         <outlet property="tableView" destination="rtr-kE-WyC" id="5VI-Kc-kS6"/>
                         <segue destination="ZeJ-Yj-L2A" kind="show" identifier="SelectToView" id="Kpg-ix-HCI"/>
-                        <segue destination="FQj-xb-KPZ" kind="show" identifier="BackToLogin" id="fR2-1X-GCF"/>
                         <segue destination="RGx-TL-Ire" kind="show" identifier="SelectToEULA" id="ztd-iQ-sau"/>
                     </connections>
                 </viewController>
@@ -2247,8 +2216,6 @@ AAAAAAEGA
                         <outlet property="Trunk" destination="N5B-xg-M4h" id="l5K-eP-erT"/>
                         <outlet property="VIN" destination="yQN-Pe-5XB" id="lJU-1a-mSp"/>
                         <outlet property="VehicleImage" destination="bHU-S4-J8c" id="XVV-eY-ydi"/>
-                        <segue destination="FQj-xb-KPZ" kind="show" identifier="BackToLogin" id="yy0-Lu-XKV"/>
-                        <segue destination="FQj-xb-KPZ" kind="show" id="utZ-H3-VDL"/>
                     </connections>
                 </viewController>
             </objects>
@@ -2635,8 +2602,6 @@ AAAAAAEGA
         <image name="up" width="600" height="380"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yy0-Lu-XKV"/>
-        <segue reference="owP-Lw-aK5"/>
         <segue reference="msp-YA-bkP"/>
         <segue reference="S1F-g1-SLj"/>
     </inferredMetricsTieBreakers>

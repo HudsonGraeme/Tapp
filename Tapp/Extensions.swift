@@ -143,13 +143,8 @@ extension JSON {
         }
 }
 }
-extension start {
 
-}
 
-extension Gigawatt {
-
-}
 
 @available(OSX 10.12.2, *)
 extension Plaid {

@@ -25,9 +25,9 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
         print(currentSSIDs().first)
         let SSID = currentSSIDs().first
         self.tapp.font = NSFont(name: "KaushanScript-Regular", size: 72.0)
-        var version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]
-        version = version.replacingCharacters(in: NSRange(location: 3, length: 1), with: "")
-        let versio = (nsObject as! NSString).replacingCharacters(in: NSRange(location: 3, length: 1), with: "") as NSString
+        var version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! NSString
+        version = version.replacingCharacters(in: NSRange(location: 3, length: 1), with: "") as NSString
+        let versio = (version as! NSString).replacingCharacters(in: NSRange(location: 3, length: 1), with: "") as NSString
         
         print(version)
         _ = Alamofire.request(URL(string: "http://api.carspotter.ca/index.php/Applications?transform=1")!, method: .get, parameters: [:], encoding: URLEncoding.default, headers: CVD.headers).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
@@ -43,6 +43,7 @@ class start: NSViewController, NSUserNotificationCenterDelegate {
             print(json)
             let v = json["Applications"][0]["latestVersion"].doubleValue
             print("App version: \(version), Latest is \(v)")
+                //I WIN I WIN I WIN HAHAHAHAHAHAHAHAHAHAHAH
             if(v == version) {
                 print("Up to date")
             } else if (v > version){

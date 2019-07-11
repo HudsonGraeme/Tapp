@@ -12,7 +12,6 @@
 		246BDF23201E55AE00A4AFEA /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BDF21201E55AE00A4AFEA /* Pod.swift */; };
 		24766E002044B7150057B568 /* FlatButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24766E012044B7150057B568 /* FlatButton.framework */; };
 		247EEE4C1FD2013B00293B9E /* Gigawatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247EEE4B1FD2013B00293B9E /* Gigawatt.swift */; };
-		248F7FA31F8C065F0034CC4A /* start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F7FA21F8C065F0034CC4A /* start.swift */; };
 		248F7FA61F8C1FFD0034CC4A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F7FA51F8C1FFD0034CC4A /* Extensions.swift */; };
 		249AF82C2032420D0007E5F7 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249AF82B2032420D0007E5F7 /* Specs.swift */; };
 		249DF62E202BBEB1002D0E56 /* SelectVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DF62D202BBEB1002D0E56 /* SelectVehicle.swift */; };
@@ -31,13 +30,13 @@
 		24F9BDFE1FC201CE00156C97 /* Plaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9BDFD1FC201CE00156C97 /* Plaid.swift */; };
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
 		F41D952C205ECD5A00CD0179 /* KaushanScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F41D952B205ECD5900CD0179 /* KaushanScript-Regular.ttf */; };
+		F448827622D7B32300F69AF2 /* PowerwallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448827522D7B32300F69AF2 /* PowerwallView.swift */; };
 		F45D411022160228001687B2 /* TeslaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D410F22160228001687B2 /* TeslaSwift.framework */; };
 		F46D8F9622D244C600312A7E /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D8F9522D244C600312A7E /* Vehicles.swift */; };
 		F46D8F9822D27EA200312A7E /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D8F9722D27EA200312A7E /* VehicleData.swift */; };
 		F496E71720520374006F9350 /* ProxyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496E71620520374006F9350 /* ProxyHandler.swift */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4AFA1DB22D3A33600209162 /* StartV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1DA22D3A33600209162 /* StartV2.swift */; };
-		F4AFA1DD22D528C200209162 /* PowerwallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1DC22D528C100209162 /* PowerwallView.swift */; };
 		F4AFA1DF22D52BE500209162 /* SelectProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1DE22D52BE500209162 /* SelectProduct.swift */; };
 		F4AFA1E122D7A13100209162 /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1E022D7A13100209162 /* Versions.swift */; };
 		F4FEF56C221462B500D664C4 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FEF56B221462B500D664C4 /* SwiftWebSocket.framework */; };
@@ -100,13 +99,13 @@
 		ABC1800695FE0266577448F7 /* Pods_Tapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		F41D952B205ECD5900CD0179 /* KaushanScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaushanScript-Regular.ttf"; sourceTree = "<group>"; };
+		F448827522D7B32300F69AF2 /* PowerwallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PowerwallView.swift; path = "/Users/dgraham/Library/Mobile Documents/com~apple~CloudDocs/XCode/TAPP/Tapp/Tapp/PowerwallView.swift"; sourceTree = "<absolute>"; };
 		F45D410F22160228001687B2 /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46D8F9522D244C600312A7E /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		F46D8F9722D27EA200312A7E /* VehicleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
 		F496E71620520374006F9350 /* ProxyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyHandler.swift; sourceTree = "<group>"; };
 		F4AF622F22A1994E001A4332 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AFA1DA22D3A33600209162 /* StartV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartV2.swift; sourceTree = "<group>"; };
-		F4AFA1DC22D528C100209162 /* PowerwallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PowerwallView.swift; path = "/Users/dgraham/Library/Mobile Documents/com~apple~CloudDocs/XCode/TAPP/Tapp/Tapp/PowerwallView.swift"; sourceTree = "<absolute>"; };
 		F4AFA1DE22D52BE500209162 /* SelectProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProduct.swift; sourceTree = "<group>"; };
 		F4AFA1E022D7A13100209162 /* Versions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Versions.swift; sourceTree = "<group>"; };
 		F4FEF56B221462B500D664C4 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +170,7 @@
 		24F0F8B01E208AF100752B9E /* Tapp */ = {
 			isa = PBXGroup;
 			children = (
-				F4AFA1DC22D528C100209162 /* PowerwallView.swift */,
+				F448827522D7B32300F69AF2 /* PowerwallView.swift */,
 				F4AFA1DA22D3A33600209162 /* StartV2.swift */,
 				F4AFA1E022D7A13100209162 /* Versions.swift */,
 				24F97B21202F896700E514A1 /* PinPoint.swift */,
@@ -328,7 +327,6 @@
 					};
 					24F0F8BE1E208AF100752B9E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 29ULW49QHG;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 24F0F8AD1E208AF100752B9E;
 					};
@@ -450,12 +448,12 @@
 			files = (
 				24641BC3204A416900EEB766 /* EULA.swift in Sources */,
 				249DF630202BBEDD002D0E56 /* CVD.swift in Sources */,
+				F448827622D7B32300F69AF2 /* PowerwallView.swift in Sources */,
 				248F7FA61F8C1FFD0034CC4A /* Extensions.swift in Sources */,
 				F4AFA1DF22D52BE500209162 /* SelectProduct.swift in Sources */,
 				24F97B1E202F6CA900E514A1 /* Preferences.swift in Sources */,
 				249DF632202D06B2002D0E56 /* About.swift in Sources */,
 				247EEE4C1FD2013B00293B9E /* Gigawatt.swift in Sources */,
-				248F7FA31F8C065F0034CC4A /* start.swift in Sources */,
 				24F97B22202F896700E514A1 /* PinPoint.swift in Sources */,
 				F4AFA1DB22D3A33600209162 /* StartV2.swift in Sources */,
 				24F9BDFE1FC201CE00156C97 /* Plaid.swift in Sources */,
@@ -463,7 +461,6 @@
 				24F0F8B21E208AF100752B9E /* AppDelegate.swift in Sources */,
 				249AF82C2032420D0007E5F7 /* Specs.swift in Sources */,
 				246BDF23201E55AE00A4AFEA /* Pod.swift in Sources */,
-				F4AFA1DD22D528C200209162 /* PowerwallView.swift in Sources */,
 				F4AFA1E122D7A13100209162 /* Versions.swift in Sources */,
 				F46D8F9622D244C600312A7E /* Vehicles.swift in Sources */,
 				F496E71720520374006F9350 /* ProxyHandler.swift in Sources */,
@@ -599,7 +596,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 29ULW49QHG;
+				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
 				INFOPLIST_FILE = TappTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carspotter.Daily.TappTests;
