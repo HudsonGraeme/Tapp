@@ -26,6 +26,9 @@ Powerwall:
   * Rename a powerwall
   * Change the operation mode
 
+## Installation and HowTo
+[View the wiki (click me)](https://github.com/hudsongraeme/Tapp/wiki/installation)
+
 ## Support me
 If you like what I do and want to invest in my app development, I have Patreon and Paypal links below. Thanks from Canada :)
 
