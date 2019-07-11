@@ -3,3 +3,4 @@ os: osx
 xcode_project: Tapp.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Tapp
 xcode_destination: platform=macOS
+script: set -o pipefail && xcodebuild -project Tapp.xcodeproj -allowProvisioningUpdates -scheme Tapp -destination platform\=macOS build test | xcpretty
