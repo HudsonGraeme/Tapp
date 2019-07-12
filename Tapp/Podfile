@@ -8,7 +8,5 @@ target 'Tapp' do
     pod 'AlamofireImage'
     pod 'SwiftWebSocket'
     pod 'KeychainAccess'
-    pod 'FlatButton'
     pod 'PromiseKit'
-    pod 'TeslaSwift'
 end

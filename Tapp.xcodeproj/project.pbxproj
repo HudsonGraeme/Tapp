@@ -96,8 +96,8 @@
 		24F97B1D202F6CA900E514A1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		24F97B21202F896700E514A1 /* PinPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPoint.swift; sourceTree = "<group>"; };
 		24F9BDFD1FC201CE00156C97 /* Plaid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plaid.swift; sourceTree = "<group>"; };
+		2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC1800695FE0266577448F7 /* Pods_Tapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		F41D952B205ECD5900CD0179 /* KaushanScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaushanScript-Regular.ttf"; sourceTree = "<group>"; };
 		F448827522D7B32300F69AF2 /* PowerwallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PowerwallView.swift; path = "/Users/dgraham/Library/Mobile Documents/com~apple~CloudDocs/XCode/TAPP/Tapp/Tapp/PowerwallView.swift"; sourceTree = "<absolute>"; };
 		F45D410F22160228001687B2 /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,7 +228,7 @@
 		D7895E8DD6FE2E620EE3F797 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */,
+				2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -416,23 +416,19 @@
 				"${SRCROOT}/Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/FlatButton/FlatButton.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/TeslaSwift/TeslaSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlatButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -570,7 +566,7 @@
 		};
 		24F0F8D41E208AF100752B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */;
+			baseConfigurationReference = 2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tapp/Tapp.entitlements;
@@ -592,13 +588,12 @@
 		};
 		24F0F8D71E208AF100752B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E773F6B06B9CF4AD29E48873 /* Pods-Tapp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
-				INFOPLIST_FILE = Tapp/Info.plist;
+				INFOPLIST_FILE = ./Tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Carspotter.Daily.TappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
