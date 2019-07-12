@@ -10,7 +10,6 @@
 		24641BC3204A416900EEB766 /* EULA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24641BC2204A416900EEB766 /* EULA.swift */; };
 		246739EB20279A1900D3E567 /* Subzero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246739EA20279A1900D3E567 /* Subzero.swift */; };
 		246BDF23201E55AE00A4AFEA /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BDF21201E55AE00A4AFEA /* Pod.swift */; };
-		24766E002044B7150057B568 /* FlatButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24766E012044B7150057B568 /* FlatButton.framework */; };
 		247EEE4C1FD2013B00293B9E /* Gigawatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247EEE4B1FD2013B00293B9E /* Gigawatt.swift */; };
 		248F7FA61F8C1FFD0034CC4A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F7FA51F8C1FFD0034CC4A /* Extensions.swift */; };
 		249AF82C2032420D0007E5F7 /* Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249AF82B2032420D0007E5F7 /* Specs.swift */; };
@@ -19,7 +18,6 @@
 		249DF632202D06B2002D0E56 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DF631202D06B2002D0E56 /* About.swift */; };
 		24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD4BB71E3A930900985A78 /* Alamofire.framework */; };
 		24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CDEE91E3FB7FB00BF16ED /* AlamofireImage.framework */; };
-		24CE55941FFAD32D009DE9E3 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248FA69C1E5E7FF700318497 /* PromiseKit.framework */; };
 		24E8477D2094FE8800DC04F7 /* TstData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 24E8477C2094FE8800DC04F7 /* TstData.JSON */; };
 		24F0F8B21E208AF100752B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0F8B11E208AF100752B9E /* AppDelegate.swift */; };
 		24F0F8B61E208AF100752B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F0F8B51E208AF100752B9E /* Assets.xcassets */; };
@@ -31,7 +29,6 @@
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
 		F41D952C205ECD5A00CD0179 /* KaushanScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F41D952B205ECD5900CD0179 /* KaushanScript-Regular.ttf */; };
 		F448827622D7B32300F69AF2 /* PowerwallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448827522D7B32300F69AF2 /* PowerwallView.swift */; };
-		F45D411022160228001687B2 /* TeslaSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D410F22160228001687B2 /* TeslaSwift.framework */; };
 		F46D8F9622D244C600312A7E /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D8F9522D244C600312A7E /* Vehicles.swift */; };
 		F46D8F9822D27EA200312A7E /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D8F9722D27EA200312A7E /* VehicleData.swift */; };
 		F496E71720520374006F9350 /* ProxyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496E71620520374006F9350 /* ProxyHandler.swift */; };
@@ -39,7 +36,6 @@
 		F4AFA1DB22D3A33600209162 /* StartV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1DA22D3A33600209162 /* StartV2.swift */; };
 		F4AFA1DF22D52BE500209162 /* SelectProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1DE22D52BE500209162 /* SelectProduct.swift */; };
 		F4AFA1E122D7A13100209162 /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AFA1E022D7A13100209162 /* Versions.swift */; };
-		F4FEF56C221462B500D664C4 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FEF56B221462B500D664C4 /* SwiftWebSocket.framework */; };
 		F4FEF56E221462B900D664C4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FEF56D221462B900D664C4 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,13 +114,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */,
-				F45D411022160228001687B2 /* TeslaSwift.framework in Frameworks */,
 				F4FEF56E221462B900D664C4 /* SwiftyJSON.framework in Frameworks */,
-				F4FEF56C221462B500D664C4 /* SwiftWebSocket.framework in Frameworks */,
-				24766E002044B7150057B568 /* FlatButton.framework in Frameworks */,
 				24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */,
 				24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */,
-				24CE55941FFAD32D009DE9E3 /* PromiseKit.framework in Frameworks */,
 				8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +409,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -426,8 +416,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,6 @@
 import Cocoa
 import Alamofire
 import SwiftyJSON
-import FlatButton
 
 class Subzero: NSViewController {
 
@@ -46,11 +45,11 @@ class Subzero: NSViewController {
     @IBOutlet weak var ExtTemperatureLabel: NSTextField!
     @IBOutlet weak var IntTemperatureLabel: NSTextField!
     @IBOutlet weak var HVACImage: NSImageView!
-    @IBOutlet weak var DriverUp: FlatButton!
-    @IBOutlet weak var DriverDown: FlatButton!
-    @IBOutlet weak var PassengerUp: FlatButton!
-    @IBOutlet weak var PassengerDown: FlatButton!
-    @IBOutlet weak var HVACControl: FlatButton!
+    @IBOutlet weak var DriverUp: NSButton!
+    @IBOutlet weak var DriverDown: NSButton!
+    @IBOutlet weak var PassengerUp: NSButton!
+    @IBOutlet weak var PassengerDown: NSButton!
+    @IBOutlet weak var HVACControl: NSButton!
     @IBOutlet weak var HSeats: NSTextField!
     @IBOutlet weak var SeatLbl: NSTextField!
     

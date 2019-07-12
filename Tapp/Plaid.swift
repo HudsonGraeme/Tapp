@@ -10,21 +10,20 @@ import Foundation
 import Cocoa
 import SwiftyJSON
 import Alamofire
-import FlatButton
 import MapKit
 
 
 let NOTIFICATIONKEY = "Tapp2"
 @available(OSX 10.12.2, *)
 class Plaid: NSViewController, NSUserNotificationCenterDelegate {
-    @IBOutlet weak var Lock: FlatButton!
-    @IBOutlet weak var RStart: FlatButton!
+    @IBOutlet weak var Lock: NSButton!
+    @IBOutlet weak var RStart: NSButton!
     @IBOutlet weak var VehicleImage: NSImageView!
-    @IBOutlet weak var FlashLights: FlatButton!
-    @IBOutlet weak var Horn: FlatButton!
-    @IBOutlet weak var Trunk: FlatButton!
-    @IBOutlet weak var Frunk: FlatButton!
-    @IBOutlet weak var ChargePort: FlatButton!
+    @IBOutlet weak var FlashLights: NSButton!
+    @IBOutlet weak var Horn: NSButton!
+    @IBOutlet weak var Trunk: NSButton!
+    @IBOutlet weak var Frunk: NSButton!
+    @IBOutlet weak var ChargePort: NSButton!
     @IBOutlet weak var VIN: NSTextField!
     @IBOutlet weak var ChargeLabel: NSTextField!
     @IBOutlet weak var Shift: NSTextField!

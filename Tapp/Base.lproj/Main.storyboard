@@ -649,7 +649,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="216" height="487"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" id="z3o-hB-Br5" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="z3o-hB-Br5">
                                         <rect key="frame" x="0.0" y="438" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Home" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fGz-Xc-Scl">
@@ -674,7 +674,7 @@
                                             <action selector="Home:" target="XuX-cp-i8l" id="PQI-t1-FiS"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="CNV-6z-c9y" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="CNV-6z-c9y">
                                         <rect key="frame" x="0.0" y="388" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Battery" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vfc-6I-H8e">
@@ -699,7 +699,7 @@
                                             <action selector="Battery:" target="XuX-cp-i8l" id="2b7-b1-jpy"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="roo-FT-TOi" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="roo-FT-TOi">
                                         <rect key="frame" x="0.0" y="338" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Climate" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s4f-lr-j2A">
@@ -724,7 +724,7 @@
                                             <action selector="Climate:" target="XuX-cp-i8l" id="hq9-Tg-u7d"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="ElV-8J-a7G" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="ElV-8J-a7G">
                                         <rect key="frame" x="0.0" y="288" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Location" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4tl-Zo-Qdy">
@@ -749,7 +749,7 @@
                                             <action selector="Location:" target="XuX-cp-i8l" id="rf9-qT-crg"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="6d4-Pz-z3I" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="6d4-Pz-z3I">
                                         <rect key="frame" x="0.0" y="238" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Information" bezelStyle="smallSquare" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dqg-1r-aVh">
@@ -774,7 +774,7 @@
                                             <action selector="Info:" target="XuX-cp-i8l" id="ksp-Ex-9nT"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="Auf-fO-ZFx" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="Auf-fO-ZFx">
                                         <rect key="frame" x="0.0" y="188" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Settings" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j1J-c5-x8a">
@@ -799,7 +799,7 @@
                                             <action selector="Settings:" target="XuX-cp-i8l" id="iYR-hU-Drp"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="FsH-s0-OVy" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="FsH-s0-OVy">
                                         <rect key="frame" x="0.0" y="91" width="216" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Logout" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oSM-UE-Xqu">
@@ -1812,7 +1812,7 @@ AAAAAAEGA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="door" id="LuP-S5-eEo"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" id="SvW-q2-Rcd" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="SvW-q2-Rcd">
                                 <rect key="frame" x="379" y="390" width="174" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Open Charge Port" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="2yB-tS-tea">
@@ -1846,7 +1846,7 @@ AAAAAAEGA
                                     <action selector="ChargePort:" target="ekw-bb-fFW" id="sJo-jK-HIu"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="cQF-LY-DNe" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="cQF-LY-DNe">
                                 <rect key="frame" x="255" y="128" width="129" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Headlights" bezelStyle="circular" alignment="center" imageScaling="proportionallyDown" inset="2" id="mHT-lA-PeO">
@@ -1880,7 +1880,7 @@ AAAAAAEGA
                                     <action selector="FlashLights:" target="ekw-bb-fFW" id="XUm-fh-xaj"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="dVy-cz-SIO" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="dVy-cz-SIO">
                                 <rect key="frame" x="292" y="62" width="167" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Remote Start" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="oih-ln-qYq">
@@ -1914,7 +1914,7 @@ AAAAAAEGA
                                     <action selector="RStart:" target="ekw-bb-fFW" id="Y98-eg-Gkr"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="bs2-c8-50U" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="bs2-c8-50U">
                                 <rect key="frame" x="424" y="128" width="103" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Horn" bezelStyle="circular" alignment="center" imageScaling="proportionallyDown" inset="2" id="FuB-ud-sXP">
@@ -1948,7 +1948,7 @@ AAAAAAEGA
                                     <action selector="Horn:" target="ekw-bb-fFW" id="O08-vS-uBz"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="N5B-xg-M4h" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="N5B-xg-M4h">
                                 <rect key="frame" x="420" y="328" width="111" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Trunk" bezelStyle="circular" alignment="center" imageScaling="proportionallyDown" inset="2" id="ffB-Mm-nb4">
@@ -2000,7 +2000,7 @@ AAAAAAEGA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" id="hCA-CK-OsH" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="hCA-CK-OsH">
                                 <rect key="frame" x="420" y="263" width="111" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Frunk" bezelStyle="circular" alignment="center" imageScaling="proportionallyDown" inset="2" id="I3O-4f-vTK">
@@ -2043,7 +2043,7 @@ AAAAAAEGA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" id="H3b-6r-Q4D" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="H3b-6r-Q4D">
                                 <rect key="frame" x="84" y="145" width="116" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Lock" bezelStyle="circular" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="zgK-gt-mF4">
@@ -2234,7 +2234,7 @@ AAAAAAEGA
                                 <rect key="frame" x="0.0" y="0.0" width="620" height="486"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" id="hkf-SG-dKw" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="hkf-SG-dKw">
                                         <rect key="frame" x="495" y="30" width="105" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Standard (90%)" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bh1-Ln-Mcs">
@@ -2253,7 +2253,7 @@ AAAAAAEGA
                                             <action selector="Standard90:" target="IVU-XZ-m5Y" id="8PM-yV-ya2"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="4nm-0h-bny" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="4nm-0h-bny">
                                         <rect key="frame" x="257" y="11" width="105" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Start Charging" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EPW-qa-wd3">
@@ -2299,7 +2299,7 @@ AAAAAAEGA
                                             <action selector="MaxRange:" target="IVU-XZ-m5Y" id="jN3-zP-bJW"/>
                                         </connections>
                                     </textField>
-                                    <button verticalHuggingPriority="750" id="QRk-6b-Zum" customClass="FlatButton" customModule="FlatButton">
+                                    <button verticalHuggingPriority="750" id="QRk-6b-Zum">
                                         <rect key="frame" x="20" y="30" width="119" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="smallSquare" title="Maximum Range" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q5N-Iw-OnU">
@@ -2403,7 +2403,7 @@ AAAAAAEGA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" id="CS3-JJ-Y2R" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="CS3-JJ-Y2R">
                                 <rect key="frame" x="481" y="102" width="119" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="up" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vLL-uM-qWS">
@@ -2425,7 +2425,7 @@ AAAAAAEGA
                                     <action selector="PassengerUp:" target="CZM-X3-aJD" id="xm6-wY-PCY"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="HKv-uZ-Pv8" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="HKv-uZ-Pv8">
                                 <rect key="frame" x="20" y="102" width="119" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="up" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uYm-i9-VIM">
@@ -2447,7 +2447,7 @@ AAAAAAEGA
                                     <action selector="DriverUp:" target="CZM-X3-aJD" id="KfB-kQ-09c"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="oys-ET-zYV" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="oys-ET-zYV">
                                 <rect key="frame" x="20" y="29" width="119" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="down" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LDv-8a-KYY">
@@ -2469,7 +2469,7 @@ AAAAAAEGA
                                     <action selector="DriverDown:" target="CZM-X3-aJD" id="i29-M3-CsV"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="5CQ-bC-dZP" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="5CQ-bC-dZP">
                                 <rect key="frame" x="481" y="29" width="119" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="down" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZNQ-5Z-IRS">
@@ -2527,7 +2527,7 @@ AAAAAAEGA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HVAC_HEAT" id="2EI-De-O0y"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" id="1TX-KJ-gYJ" customClass="FlatButton" customModule="FlatButton">
+                            <button verticalHuggingPriority="750" id="1TX-KJ-gYJ">
                                 <rect key="frame" x="237" y="16" width="146" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="Turn HVAC On" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ooy-Ra-KTg">

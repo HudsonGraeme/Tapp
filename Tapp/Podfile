@@ -6,7 +6,6 @@ target 'Tapp' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'AlamofireImage'
-    pod 'SwiftWebSocket'
+   # pod 'SwiftWebSocket'
     pod 'KeychainAccess'
-    pod 'PromiseKit'
 end

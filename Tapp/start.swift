@@ -12,7 +12,6 @@ import Alamofire
 import SwiftyJSON
 import CoreWLAN
 import KeychainAccess
-import FlatButton
 import TeslaSwift
 
 class start: NSViewController, NSUserNotificationCenterDelegate {

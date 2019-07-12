@@ -9,14 +9,13 @@
 import Cocoa
 import Alamofire
 import SwiftyJSON
-import FlatButton
 import CoreGraphics
 
 class Gigawatt: NSViewController {
     @IBOutlet weak var PercentageLabel: NSTextField!
-    @IBOutlet weak var ChargeControl: FlatButton!
-    @IBOutlet weak var Standard90: FlatButton!
-    @IBOutlet weak var MaxRange: FlatButton!
+    @IBOutlet weak var ChargeControl: NSButton!
+    @IBOutlet weak var Standard90: NSButton!
+    @IBOutlet weak var MaxRange: NSButton!
     @IBOutlet weak var levelView: NSView!
     
     
