@@ -10,6 +10,11 @@
 		24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD4BB71E3A930900985A78 /* Alamofire.framework */; };
 		24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CDEE91E3FB7FB00BF16ED /* AlamofireImage.framework */; };
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
+		F43C384222DA4F68001400F8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384122DA4F68001400F8 /* Alamofire.framework */; };
+		F43C384422DA4F68001400F8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384322DA4F68001400F8 /* AlamofireImage.framework */; };
+		F43C384622DA4F68001400F8 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384522DA4F68001400F8 /* KeychainAccess.framework */; };
+		F43C384822DA4F68001400F8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384722DA4F68001400F8 /* SwiftyJSON.framework */; };
+		F43C384922DA4F68001400F8 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BC22D95D010007E43A /* AppDelegate.swift */; };
 		F4CAE4BF22D95D010007E43A /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BD22D95D010007E43A /* About.swift */; };
@@ -71,6 +76,10 @@
 		2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC1800695FE0266577448F7 /* Pods_Tapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1028EFD89D3E203915DDC4A /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F43C384122DA4F68001400F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43C384322DA4F68001400F8 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43C384522DA4F68001400F8 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43C384722DA4F68001400F8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D410F22160228001687B2 /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AF622F22A1994E001A4332 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAE4BB22D95D000007E43A /* Tapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tapp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -135,6 +144,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43C384222DA4F68001400F8 /* Alamofire.framework in Frameworks */,
+				F43C384422DA4F68001400F8 /* AlamofireImage.framework in Frameworks */,
+				F43C384622DA4F68001400F8 /* KeychainAccess.framework in Frameworks */,
+				F43C384922DA4F68001400F8 /* Pods_Tapp.framework in Frameworks */,
+				F43C384822DA4F68001400F8 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,26 +158,19 @@
 		24F0F8A51E208AF000752B9E = {
 			isa = PBXGroup;
 			children = (
-				F4CAE4F522D95ED70007E43A /* Assets.xcassets */,
-				F4CAE4F622D95ED80007E43A /* Base.lproj */,
 				F4CAE4EE22D95D460007E43A /* TstData.JSON */,
 				F4CAE4ED22D95D460007E43A /* VehicleData.swift */,
 				F4CAE4F022D95D470007E43A /* Vehicles.swift */,
 				F4CAE4EF22D95D470007E43A /* Versions.swift */,
 				F4CAE4E122D95D400007E43A /* PowerwallView.swift */,
-				F4CAE4D822D95D3B0007E43A /* Preferences.swift */,
-				F4CAE4E222D95D400007E43A /* ProxyHandler.swift */,
 				F4CAE4E022D95D400007E43A /* SelectProduct.swift */,
 				F4CAE4DF22D95D400007E43A /* SelectVehicle.swift */,
 				F4CAE4F922D95F1D0007E43A /* Main.storyboard */,
-				F4CAE4DD22D95D3F0007E43A /* Specs.swift */,
 				F4CAE4DE22D95D3F0007E43A /* start.swift */,
 				F4CAE4D922D95D3B0007E43A /* StartV2.swift */,
+				F4CAE4DD22D95D3F0007E43A /* Specs.swift */,
 				F4CAE4DA22D95D3B0007E43A /* Subzero.swift */,
 				F4CAE4DB22D95D3B0007E43A /* Table.swift */,
-				F4CAE4DC22D95D3B0007E43A /* Tapp.entitlements */,
-				F4CAE4CE22D95D240007E43A /* GoogleService-Info.plist */,
-				F4CAE4D022D95D240007E43A /* Info.plist */,
 				F4CAE4CF22D95D240007E43A /* login.swift */,
 				F4CAE4D122D95D240007E43A /* PinPoint.swift */,
 				F4CAE4CD22D95D240007E43A /* Plaid.swift */,
@@ -176,6 +183,13 @@
 				F4CAE4C122D95D0D0007E43A /* Extensions.swift */,
 				F4CAE4C222D95D0D0007E43A /* Feed.swift */,
 				F4CAE4C322D95D0D0007E43A /* FeedItem.swift */,
+				F4CAE4D822D95D3B0007E43A /* Preferences.swift */,
+				F4CAE4E222D95D400007E43A /* ProxyHandler.swift */,
+				F4CAE4CE22D95D240007E43A /* GoogleService-Info.plist */,
+				F4CAE4D022D95D240007E43A /* Info.plist */,
+				F4CAE4DC22D95D3B0007E43A /* Tapp.entitlements */,
+				F4CAE4F522D95ED70007E43A /* Assets.xcassets */,
+				F4CAE4F622D95ED80007E43A /* Base.lproj */,
 				F4CAE50722DA0AE30007E43A /* Resources */,
 				F4CAE50E22DA0D320007E43A /* TappTest */,
 				24F0F8AF1E208AF100752B9E /* Products */,
@@ -197,6 +211,10 @@
 		3F6627BBE448A2F8D7A7CA24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F43C384122DA4F68001400F8 /* Alamofire.framework */,
+				F43C384322DA4F68001400F8 /* AlamofireImage.framework */,
+				F43C384522DA4F68001400F8 /* KeychainAccess.framework */,
+				F43C384722DA4F68001400F8 /* SwiftyJSON.framework */,
 				F4CAE4FC22DA09DA0007E43A /* Alamofire.framework */,
 				F4CAE4FE22DA09DA0007E43A /* AlamofireImage.framework */,
 				F4CAE50022DA09DA0007E43A /* KeychainAccess.framework */,
@@ -292,7 +310,7 @@
 					24F0F8AD1E208AF100752B9E = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
 								enabled = 1;
@@ -307,7 +325,7 @@
 					};
 					F4CAE50C22DA0D320007E43A = {
 						CreatedOnToolsVersion = 10.2.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 24F0F8AD1E208AF100752B9E;
 					};
 				};
@@ -528,8 +546,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Tapp.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -538,7 +556,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = hudsongraeme.tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "XC OSX: hudsongraeme.tapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -556,9 +574,9 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Q6GVZ4RFU3;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = TappTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
