@@ -11,4 +11,3 @@ before_install:
 - pod install --project-directory=./Tapp/
 script: 
 - set -o pipefail && xcodebuild -workspace ./Tapp/Tapp.xcworkspace -scheme Tapp -destination platform=macOS build test -allowProvisioningUpdates CODE_SIGNING_REQUIRED=NO | xcpretty
-- pod lib lint
