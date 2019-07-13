@@ -567,7 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sg.TappTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapp.app/Contents/MacOS/Tapp";
 			};
 			name = Debug;
