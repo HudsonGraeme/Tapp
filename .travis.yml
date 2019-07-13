@@ -1,6 +1,6 @@
 language: swift
 os: osx
-osx_image: xcode10.2
+osx_image: xcode10.1
 xcode_project: ./Tapp/Tapp.xcodeproj # path to your xcodeproj folder
 xcode_scheme: TappTest
 #xcode_workspace: ./Tapp/Tapp.xcworkspace
