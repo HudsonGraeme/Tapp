@@ -10,11 +10,6 @@
 		24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD4BB71E3A930900985A78 /* Alamofire.framework */; };
 		24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CDEE91E3FB7FB00BF16ED /* AlamofireImage.framework */; };
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
-		F43C384222DA4F68001400F8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384122DA4F68001400F8 /* Alamofire.framework */; };
-		F43C384422DA4F68001400F8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384322DA4F68001400F8 /* AlamofireImage.framework */; };
-		F43C384622DA4F68001400F8 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384522DA4F68001400F8 /* KeychainAccess.framework */; };
-		F43C384822DA4F68001400F8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384722DA4F68001400F8 /* SwiftyJSON.framework */; };
-		F43C384922DA4F68001400F8 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BC22D95D010007E43A /* AppDelegate.swift */; };
 		F4CAE4BF22D95D010007E43A /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BD22D95D010007E43A /* About.swift */; };
@@ -144,11 +139,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43C384222DA4F68001400F8 /* Alamofire.framework in Frameworks */,
-				F43C384422DA4F68001400F8 /* AlamofireImage.framework in Frameworks */,
-				F43C384622DA4F68001400F8 /* KeychainAccess.framework in Frameworks */,
-				F43C384922DA4F68001400F8 /* Pods_Tapp.framework in Frameworks */,
-				F43C384822DA4F68001400F8 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
