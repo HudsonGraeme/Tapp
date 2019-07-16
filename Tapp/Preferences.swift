@@ -60,7 +60,7 @@ class Preferences: NSViewController {
     }
     override func viewDidAppear() {
         super.viewDidAppear()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.ColorChange(_:)), name: NSNotification.Name(rawValue: "ChangeColor"), object: nil)
+ 
         if(self.view.layer?.backgroundColor == NSColor.darkGray.cgColor) {
             self.StyleSelector.selectItem(at: 0)
         } else if(self.view.layer?.backgroundColor == NSColor.lightGray.cgColor) {
@@ -75,9 +75,7 @@ class Preferences: NSViewController {
     @IBOutlet weak var GraphSaves: NSPopUpButton!
     @IBOutlet weak var LocationTimer: NSPopUpButton!
     
-    @objc func ColorChange(_ notification: NSNotification) {
-        self.view.layer?.backgroundColor = notification.userInfo!["color"] as! CGColor
-    }
+
     
     @IBAction func StyleSelector(_ sender: Any) {
         var color = NSColor.darkGray.cgColor

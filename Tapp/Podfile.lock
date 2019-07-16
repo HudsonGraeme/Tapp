@@ -3,12 +3,14 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - KeychainAccess (3.2.0)
+  - SSZipArchive (2.1.5)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - KeychainAccess
+  - SSZipArchive
   - SwiftyJSON
 
 SPEC REPOS:
@@ -16,14 +18,16 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - KeychainAccess
+    - SSZipArchive
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  SSZipArchive: cefe1364104a0231268a5deb8495bdf2861f52f0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 984964332317edcac804a777710629e799722a8b
+PODFILE CHECKSUM: 030ecb491a6b786ccf8750a83cdfd1b8681dc505
 
 COCOAPODS: 1.5.2

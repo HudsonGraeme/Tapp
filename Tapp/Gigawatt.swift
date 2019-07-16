@@ -43,8 +43,7 @@ class Gigawatt: NSViewController {
         super.viewDidAppear()
         self.setLevel()
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.setLevel), userInfo: nil, repeats: true)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.ColorChange(_:)), name: NSNotification.Name(rawValue: "ChangeColor"), object: nil)
-    }
+
     override func viewWillDisappear() {
         super.viewWillDisappear()
         timer.invalidate()
@@ -53,9 +52,6 @@ class Gigawatt: NSViewController {
     var v = CVD.SelectedVehicle
     var timer = Timer()
     
-    @objc func ColorChange(_ notification: NSNotification) {
-        self.view.layer?.backgroundColor = notification.userInfo!["color"] as! CGColor
-    }
 
     
    @objc func setLevel() {

@@ -20,7 +20,7 @@ class EULA: NSViewController {
         self.view.layer?.backgroundColor = NSColor.darkGray.cgColor
         
         var EULASTR = String()
-        let request = Alamofire.request(URL(string: "https://raw.githubusercontent.com/HudsonGraeme/Tapp/master/LICENSE")!)
+        Alamofire.request(URL(string: "https://raw.githubusercontent.com/HudsonGraeme/Tapp/master/LICENSE")!)
             .responseString { response in
                 if(response.result.value != nil) {
                 EULASTR = response.result.value!

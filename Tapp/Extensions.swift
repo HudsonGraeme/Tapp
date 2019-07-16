@@ -147,14 +147,11 @@ extension JSON {
 
 
 @available(OSX 10.12.2, *)
-extension Plaid {
-}
-extension Subzero {
-}
+
 extension NSViewController {
     class func WakeUp(ID VehicleID: Int) {
         let url = URL(string:"https://owner-api.teslamotors.com/api/1/vehicles/\(VehicleID)/wake_up")
-        _ = Alamofire.request(url!, method: .post, parameters: [:], encoding: JSONEncoding.default, headers: CVD.headers).responseJSON { response in
+        _ = Alamofire.request(url!, method: .post, parameters: [:], encoding: JSONEncoding.default, headers: [:]).responseJSON { response in
 
         }
     }
@@ -210,7 +207,7 @@ extension String: ParameterEncoding {
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         var request = try urlRequest.asURLRequest()
         request.httpBody = data(using: .utf8, allowLossyConversion: false)
-        print(request.httpBody)
+        print(request.httpBody!)
         return request
     }
 }
@@ -223,16 +220,6 @@ func increaseRect(rect: CGRect, byPercentage percentage: CGFloat) -> CGRect {
     return rect.insetBy(dx: -adjustmentWidth, dy: -adjustmentHeight)
 }
 
-class BatteryLevelIndicator: NSLevelIndicator {
-    
-}
-class BatteryLevelIndicatorCell: NSLevelIndicatorCell {
-    
-    override func draw(withFrame cellFrame: NSRect, in controlView: NSView) {
-        0
-    }
-    
-}
 
 class LevelIndicatorAnimation: NSAnimation {
     weak var progInd: NSLevelIndicator?

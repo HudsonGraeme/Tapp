@@ -16,7 +16,7 @@ import SwiftyJSON
 class SelectVehicle : NSViewController, NSTableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let NumberOfVehicles = CVD.numOfVehicles
+        let NumberOfVehicles = 1
         self.tableView.delegate = self as NSTableViewDelegate
         self.tableView.dataSource = self
         self.Loading.animate(toDoubleValue: 1)
@@ -49,7 +49,7 @@ class SelectVehicle : NSViewController, NSTableViewDelegate {
     
     @objc func onItemClicked() {
         
-        CVD.SelectedVehicle = tableView.clickedRow
+        //CVD.SelectedVehicle = tableView.clickedRow
         self.performSegue(withIdentifier: "SelectToView", sender: self)
         self.view.window?.close()
     }
@@ -59,14 +59,14 @@ class SelectVehicle : NSViewController, NSTableViewDelegate {
     
     func getcardata(_ Car: Int) {
         self.Loading.animate(toDoubleValue: 2)
-        let vehicleid = CVD.vehicleIDs[Car]
+       // let vehicleid = CVD.vehicleIDs[Car]
         let url = URL(string:"https://owner-api.teslamotors.com/api/1/vehicles/\(vehicleid)/data")
         
         var name: String = ""
         var model: Character = "s"
         var image: Image?
         
-        let _ = Alamofire.request(url!, method: .get, encoding: URLEncoding.default, headers: CVD.headers).downloadProgress(queue: DispatchQueue.global(qos: .utility)) {
+        let _ = Alamofire.request(url!, method: .get, encoding: URLEncoding.default, headers: //CVD.headers).downloadProgress(queue: DispatchQueue.global(qos: .utility)) {
             progress in
             }
             .validate { request, response, data in

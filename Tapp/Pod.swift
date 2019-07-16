@@ -31,7 +31,7 @@ class MenuController: NSViewController {
     }
     override func loadView() {
         super.loadView()
-        tabViewController = parent?.children[1] as! NSTabViewController!
+        tabViewController = (parent?.children[1] as! NSTabViewController?)!
         self.view.wantsLayer = true
         //self.view.layer?.backgroundColor = NSColor.darkGray.cgColor
     }

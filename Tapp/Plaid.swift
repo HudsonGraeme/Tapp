@@ -126,7 +126,7 @@ class Plaid: NSViewController, NSUserNotificationCenterDelegate {
         }
         let geoc = CLGeocoder()
         geoc.reverseGeocodeLocation(loc) { placemarks, error in
-            if let e = error {
+            if error != nil {
             } else {
                 let placeArray = placemarks
                 var placeMark: CLPlacemark!

@@ -23,8 +23,7 @@ class Subzero: NSViewController {
         super.viewDidAppear()
         self.onLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.onLoad), name: NSNotification.Name(rawValue: NOTIFICATIONKEY), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.ColorChange(_:)), name: NSNotification.Name(rawValue: "ChangeColor"), object: nil)
-    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.view.layer?.backgroundColor = CVD.Theme
@@ -33,10 +32,7 @@ class Subzero: NSViewController {
         super.viewWillDisappear()
         timer.invalidate()
     }
-    
-    @objc func ColorChange(_ notification: NSNotification) {
-        self.view.layer?.backgroundColor = notification.userInfo!["color"] as! CGColor
-    }
+
 
     @IBOutlet weak var DriverTempLabel: NSTextField!
     @IBOutlet weak var PassengerTempLabel: NSTextField!

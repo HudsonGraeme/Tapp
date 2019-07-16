@@ -34,6 +34,7 @@ import Foundation
 import Cocoa
 import Alamofire
 import KeychainAccess
+import SSZipArchive
 
 class Login: NSViewController {
     
@@ -41,7 +42,6 @@ class Login: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 1. Contact Carspotter and compare versions (42-59)
         Alamofire.request(URL(string: "http://api.carspotter.ca/index.php/Applications?transform=1")!).responseVersion { (response) in
             
@@ -53,8 +53,46 @@ class Login: NSViewController {
                     print("yes")
                     let response = Alert("New Software Available!", "A new version of Tapp is available (\(v.applications[0].latestVersion)). Would you like to update from your current version (\(versionReadable))?", .informational, 2, ["Update", "Cancel"])
                     if (response == 1001) {
-                        NSWorkspace.shared.open(URL(string: "https://github.com/HudsonGraeme/Tapp/releases")!)
-                        // TODO: ADD AUTOMATIC UPDATE
+                        let progressIndicator = NSProgressIndicator(frame: NSRect(x: self.view.frame.origin.x,y: self.view.frame.origin.y,width: 400,height: 50))
+                        progressIndicator.minValue = 0.0
+                        progressIndicator.maxValue = 1.00
+                        progressIndicator.isIndeterminate = false
+                        progressIndicator.style = .bar
+                        progressIndicator.controlTint = .blueControlTint
+                      progressIndicator.doubleValue = 0.0
+                        self.view.window?.contentView?.addSubview(progressIndicator)
+                        
+                        func removeFile(atPath path: String) {
+                        if (FileManager.default.fileExists(atPath: path)) {
+                            print("File exists...Removing.")
+                            do {
+                            try FileManager.default.removeItem(atPath: path)
+                            } catch {
+                                print("Failed to remove file at path \(path)")
+                            }
+                        }
+                        }
+                        removeFile(atPath: "/Applications/Tapp.app")
+                        Alamofire.download("https://apps.carspotter.ca/Tapp/releases/\(v.applications[0].latestVersion)/Tapp.app", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil, to: DownloadRequest.suggestedDownloadDestination(for: FileManager.SearchPathDirectory.applicationSupportDirectory, in: .allDomainsMask)).downloadProgress(closure: { (Progresss) in
+                            print(Progresss)
+                            progressIndicator.doubleValue = Progresss.fractionCompleted
+                            
+                        }).response(completionHandler: { (response) in
+                            if ((response.error) != nil) {
+                                
+                            } else {
+                            do {
+                                
+                                print(response.destinationURL!.path)
+                            try SSZipArchive.unzipFile(atPath: response.destinationURL!.path, toDestination: "/Applications/", overwrite: true, password: nil)
+                                removeFile(atPath: response.destinationURL!.path)
+                            } catch let error{
+                                print("Failed to unzip \(error)")
+                            }
+                            }
+                        })
+                        
+                        // WIP: ADD AUTOMATIC UPDATE
                     }
                 }
             }
@@ -86,9 +124,8 @@ class Login: NSViewController {
         
     }
     
-    //Comment! 
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        let selectController = segue.destinationController as! SelectVehicle
+        //let selectController = segue.destinationController as! SelectVehicle
         //Explain what's going on to SelectVehicle
     }
     
