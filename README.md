@@ -1,7 +1,5 @@
 
-# Tapp [![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp)
-
-Copyright © 2019 Spencer Graham
+# Tapp [![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp) 
 
 Hello first of all thanks for your continued support - it's very helpful!
 
@@ -36,3 +34,5 @@ Powerwall:
 If you like what I do and want to invest in my app development, I have Patreon and Paypal links below. Thanks from Canada :)
 
 <a href="https://www.patreon.com/OSXSpencer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Patreon_logomark.svg/1024px-Patreon_logomark.svg.png" data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Patreon_logomark.svg/1024px-Patreon_logomark.svg.png" width="250" height="250"/></a> <a href="https://www.paypal.me/SpencerGraham"><img src="https://vcf-uk.org/wp-content/uploads/2015/04/PayPal-Logo-Vector-Image.png" data-canonical-src="https://vcf-uk.org/wp-content/uploads/2015/04/PayPal-Logo-Vector-Image.png" width="400" height="250"  /></a>
+
+Copyright © 2019 Spencer Graham
