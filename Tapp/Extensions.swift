@@ -173,9 +173,34 @@ func Alert(_ title:String,_ text:String,_ style:NSAlert.Style,_ buttonCount:Int,
     let stackViewer = NSStackView()
     
     alert.accessoryView = stackViewer
+    alert.addVisualEffectView()
     
     let response: NSApplication.ModalResponse = alert.runModal()
     return response.rawValue
+}
+
+extension NSAlert {
+    func addVisualEffectView() {
+        let EffectView = NSVisualEffectView(frame: self.window.frame)
+        EffectView.material = .popover
+        EffectView.blendingMode = .behindWindow
+        EffectView.state = .active
+        for (subview) in (self.window.contentView!.subviews) {
+            EffectView.subviews.append(subview)
+        }
+        self.window.styleMask.insert(.fullSizeContentView)
+        self.window.isMovableByWindowBackground = true
+        self.window.styleMask.insert(.borderless)
+        self.window.contentView!.subviews.removeAll()
+        self.window.titlebarAppearsTransparent = true
+        self.window.titleVisibility = .hidden
+        self.window.contentView = EffectView
+        self.window.contentView!.wantsLayer = true
+        self.window.contentView!.layer!.cornerRadius = 10.0
+        self.window.backgroundColor = .clear
+        self.window.isOpaque = false
+    }
+    
 }
 
 extension NSAttributedString {

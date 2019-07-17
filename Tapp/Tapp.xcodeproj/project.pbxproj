@@ -10,8 +10,9 @@
 		24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD4BB71E3A930900985A78 /* Alamofire.framework */; };
 		24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CDEE91E3FB7FB00BF16ED /* AlamofireImage.framework */; };
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
+		F43BA85E22DF763E008EEEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BA85D22DF7622008EEEC6 /* Main.storyboard */; };
 		F43C384B22DD1F64001400F8 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384A22DD1F64001400F8 /* SSZipArchive.framework */; };
-		F43C384C22DD2119001400F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CAE4F922D95F1D0007E43A /* Main.storyboard */; };
+		F47C154622DFBC7D00A76942 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4CC22D95D230007E43A /* Pod.swift */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BC22D95D010007E43A /* AppDelegate.swift */; };
 		F4CAE4C622D95D0D0007E43A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4C122D95D0D0007E43A /* Extensions.swift */; };
@@ -44,6 +45,7 @@
 		2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC1800695FE0266577448F7 /* Pods_Tapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1028EFD89D3E203915DDC4A /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F43BA85D22DF7622008EEEC6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F43C384122DA4F68001400F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C384322DA4F68001400F8 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C384522DA4F68001400F8 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +85,6 @@
 		F4CAE4F022D95D470007E43A /* Vehicles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 		F4CAE4F522D95ED70007E43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4CAE4F622D95ED80007E43A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
-		F4CAE4FA22D95F1D0007E43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4CAE4FC22DA09DA0007E43A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAE4FE22DA09DA0007E43A /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAE50022DA09DA0007E43A /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +123,6 @@
 				F4CAE4E122D95D400007E43A /* PowerwallView.swift */,
 				F4CAE4E022D95D400007E43A /* SelectProduct.swift */,
 				F4CAE4DF22D95D400007E43A /* SelectVehicle.swift */,
-				F4CAE4F922D95F1D0007E43A /* Main.storyboard */,
 				F4CAE4DE22D95D3F0007E43A /* start.swift */,
 				F4CAE4D922D95D3B0007E43A /* StartV2.swift */,
 				F4CAE4DD22D95D3F0007E43A /* Specs.swift */,
@@ -134,6 +134,7 @@
 				F4CAE4CC22D95D230007E43A /* Pod.swift */,
 				F4CAE4CA22D95D130007E43A /* Gigawatt.swift */,
 				F4CAE4BD22D95D010007E43A /* About.swift */,
+				F43BA85D22DF7622008EEEC6 /* Main.storyboard */,
 				F4CAE4BC22D95D010007E43A /* AppDelegate.swift */,
 				F4CAE4C022D95D0C0007E43A /* CVD.swift */,
 				F4CAE4C422D95D0D0007E43A /* EULA.swift */,
@@ -287,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43C384C22DD2119001400F8 /* Main.storyboard in Resources */,
+				F43BA85E22DF763E008EEEC6 /* Main.storyboard in Resources */,
 				F4CAE4F222D95D480007E43A /* TstData.JSON in Resources */,
 				F4CAE4D422D95D240007E43A /* GoogleService-Info.plist in Resources */,
 				F4CAE4F822D95ED90007E43A /* Base.lproj in Resources */,
@@ -350,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47C154622DFBC7D00A76942 /* Pod.swift in Sources */,
 				F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */,
 				F4CAE4EA22D95D410007E43A /* SelectProduct.swift in Sources */,
 				F4CAE4E422D95D400007E43A /* StartV2.swift in Sources */,
@@ -361,17 +363,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F4CAE4F922D95F1D0007E43A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4CAE4FA22D95F1D0007E43A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		24F0F8D11E208AF100752B9E /* Debug */ = {

@@ -42,6 +42,7 @@ class Login: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer!.cornerRadius = 10.0
         // 1. Contact Carspotter and compare versions (42-59)
         Alamofire.request(URL(string: "http://api.carspotter.ca/index.php/Applications?transform=1")!).responseVersion { (response) in
             
@@ -50,16 +51,30 @@ class Login: NSViewController {
             
             if let v = response.result.value {
                 if (v.applications[0].latestVersion > version){
-                    print("yes")
+                    self.view.window!.setIsVisible(false)
                     let response = Alert("New Software Available!", "A new version of Tapp is available (\(v.applications[0].latestVersion)). Would you like to update from your current version (\(versionReadable))?", .informational, 2, ["Update", "Cancel"])
+                    
                     if (response == 1001) {
-                        let progressIndicator = NSProgressIndicator(frame: NSRect(x: self.view.frame.origin.x,y: self.view.frame.origin.y,width: 400,height: 50))
+                        self.view.window!.setIsVisible(true)
+                        self.view.setFrameSize(NSSize(width: 450.0, height: 200.0))
+                        self.view.window!.setFrame(NSRect(x: self.view.window!.frame.origin.x, y: self.view.window!.frame.origin.y, width: 450.0, height: 200.0), display: true, animate: true)
+                        let progressIndicator = NSProgressIndicator(frame: NSRect(x: 20.0,y: 56.0,width: 414,height: 15))
                         progressIndicator.minValue = 0.0
                         progressIndicator.maxValue = 1.00
                         progressIndicator.isIndeterminate = false
                         progressIndicator.style = .bar
                         progressIndicator.controlTint = .blueControlTint
+                        progressIndicator.isHidden = false
+                        
                       progressIndicator.doubleValue = 0.0
+                        print(self.Background.subviews)
+                        for (subview) in (self.Background.subviews) {
+                            if(subview != self.TappText) {
+                            subview.isHidden = true
+                            }
+                        }
+                       
+                        self.TappText.stringValue = "Updating..."
                         self.view.window?.contentView?.addSubview(progressIndicator)
                         
                         func removeFile(atPath path: String) {
@@ -81,18 +96,29 @@ class Login: NSViewController {
                             if ((response.error) != nil) {
                                 
                             } else {
+                                self.TappText.textColor = .systemGreen
+                                self.TappText.stringValue = "Complete"
                             do {
                                 
                                 print(response.destinationURL!.path)
                             try SSZipArchive.unzipFile(atPath: response.destinationURL!.path, toDestination: "/Applications/", overwrite: true, password: nil)
                                 removeFile(atPath: response.destinationURL!.path)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/Tapp.app"))
+                                    NSApplication.shared.terminate(nil)
+                                }
+                                
                             } catch let error{
                                 print("Failed to unzip \(error)")
                             }
+
                             }
                         })
                         
-                        // WIP: ADD AUTOMATIC UPDATE
+                        // DONE: ADD AUTOMATIC UPDATE
+                    }
+                    else {
+                        self.view.window!.setIsVisible(true)
                     }
                 }
             }
@@ -128,6 +154,13 @@ class Login: NSViewController {
         //let selectController = segue.destinationController as! SelectVehicle
         //Explain what's going on to SelectVehicle
     }
+    
+    
+    
+    @IBOutlet weak var TappText: NSTextField!
+    @IBOutlet weak var Background: NSVisualEffectView!
+    
+    
     
     func getVehicles(_ token:String) {
         Alamofire.request(URL(string: "https://owner-api.teslamotors.com/api/1/vehicles")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "Bearer \(token)"]).responseVehicles { (response) in
