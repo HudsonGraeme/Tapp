@@ -1,5 +1,8 @@
 
 # Tapp [![Build Status](https://travis-ci.org/HudsonGraeme/Tapp.svg?branch=master)](https://travis-ci.org/HudsonGraeme/Tapp)
+
+Copyright © 2019 Spencer Graham
+
 Hello first of all thanks for your continued support - it's very helpful!
 
 Working through a new data model; 2.5 features logo and UI redesign with Powerwall support
