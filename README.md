@@ -41,6 +41,15 @@ All Icons were modified from their original form in order to suit the applicatio
 
 * Tesla Supercharger by Ervin Bolat from the Noun Project
 * schedule by Markus from the Noun Project
-* Unlock by shashank singh from the Noun Project
+* Unlock and Lock by shashank singh from the Noun Project
+* Key Battery Low by BomSymbols from the Noun Project
+* Headlight by ProSymbols from the Noun Project
+* Horn by Lloyd Humphreys from the Noun Project
+* Home by My Toley from the Noun Project
+* Power by David from the Noun Project
+* Music by Arnaldo Cabeza from the Noun Project
+* Thermometer by Becris from the Noun Project
+* Location by DIVYA A from the Noun Project
+* valet by Baboon designs from the Noun Project
 
 Copyright © 2019 Spencer Graham
