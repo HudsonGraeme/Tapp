@@ -41,5 +41,6 @@ All Icons were modified from their original form in order to suit the applicatio
 
 * Tesla Supercharger by Ervin Bolat from the Noun Project
 * schedule by Markus from the Noun Project
+* Unlock by shashank singh from the Noun Project
 
 Copyright © 2019 Spencer Graham
