@@ -37,6 +37,8 @@ If you like what I do and want to invest in my app development, I have Patreon a
 
 ## Icon Attributions
 
+All Icons were modified from their original form in order to suit the application theme.
+
 * Tesla Supercharger by Ervin Bolat from the Noun Project
 * schedule by Markus from the Noun Project
 
