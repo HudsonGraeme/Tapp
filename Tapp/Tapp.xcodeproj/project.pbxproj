@@ -10,9 +10,12 @@
 		24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD4BB71E3A930900985A78 /* Alamofire.framework */; };
 		24CE55901FFAD32D009DE9E3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CDEE91E3FB7FB00BF16ED /* AlamofireImage.framework */; };
 		8540D4011A12C6BE34208F67 /* Pods_Tapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1800695FE0266577448F7 /* Pods_Tapp.framework */; };
+		F424F2F622E244EE0083B048 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424F2F522E244EE0083B048 /* HomeVC.swift */; };
 		F43BA85E22DF763E008EEEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BA85D22DF7622008EEEC6 /* Main.storyboard */; };
 		F43C384B22DD1F64001400F8 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384A22DD1F64001400F8 /* SSZipArchive.framework */; };
 		F47C154622DFBC7D00A76942 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4CC22D95D230007E43A /* Pod.swift */; };
+		F48CBF6022EF84380018D8A6 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */; };
+		F49BCC2A22DFCC04003F1754 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BCC2922DFCC04003F1754 /* Authentication.swift */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BC22D95D010007E43A /* AppDelegate.swift */; };
 		F4CAE4C622D95D0D0007E43A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4C122D95D0D0007E43A /* Extensions.swift */; };
@@ -45,6 +48,7 @@
 		2EB50D7FA26C1A269B534F70 /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Tapp/Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC1800695FE0266577448F7 /* Pods_Tapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1028EFD89D3E203915DDC4A /* Pods-Tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tapp/Pods-Tapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F424F2F522E244EE0083B048 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F43BA85D22DF7622008EEEC6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F43C384122DA4F68001400F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C384322DA4F68001400F8 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +56,8 @@
 		F43C384722DA4F68001400F8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43C384A22DD1F64001400F8 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D410F22160228001687B2 /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49BCC2922DFCC04003F1754 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		F4AF622F22A1994E001A4332 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAE4BB22D95D000007E43A /* Tapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tapp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4CAE4BC22D95D010007E43A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48CBF6022EF84380018D8A6 /* SwiftWebSocket.framework in Frameworks */,
 				F43C384B22DD1F64001400F8 /* SSZipArchive.framework in Frameworks */,
 				F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */,
 				F4FEF56E221462B900D664C4 /* SwiftyJSON.framework in Frameworks */,
@@ -116,6 +123,10 @@
 		24F0F8A51E208AF000752B9E = {
 			isa = PBXGroup;
 			children = (
+				F424F2F522E244EE0083B048 /* HomeVC.swift */,
+				F4CAE4D922D95D3B0007E43A /* StartV2.swift */,
+				F4CAE4CC22D95D230007E43A /* Pod.swift */,
+				F43BA85D22DF7622008EEEC6 /* Main.storyboard */,
 				F4CAE4EE22D95D460007E43A /* TstData.JSON */,
 				F4CAE4ED22D95D460007E43A /* VehicleData.swift */,
 				F4CAE4F022D95D470007E43A /* Vehicles.swift */,
@@ -124,17 +135,15 @@
 				F4CAE4E022D95D400007E43A /* SelectProduct.swift */,
 				F4CAE4DF22D95D400007E43A /* SelectVehicle.swift */,
 				F4CAE4DE22D95D3F0007E43A /* start.swift */,
-				F4CAE4D922D95D3B0007E43A /* StartV2.swift */,
+				F49BCC2922DFCC04003F1754 /* Authentication.swift */,
 				F4CAE4DD22D95D3F0007E43A /* Specs.swift */,
 				F4CAE4DA22D95D3B0007E43A /* Subzero.swift */,
 				F4CAE4DB22D95D3B0007E43A /* Table.swift */,
 				F4CAE4CF22D95D240007E43A /* login.swift */,
 				F4CAE4D122D95D240007E43A /* PinPoint.swift */,
 				F4CAE4CD22D95D240007E43A /* Plaid.swift */,
-				F4CAE4CC22D95D230007E43A /* Pod.swift */,
 				F4CAE4CA22D95D130007E43A /* Gigawatt.swift */,
 				F4CAE4BD22D95D010007E43A /* About.swift */,
-				F43BA85D22DF7622008EEEC6 /* Main.storyboard */,
 				F4CAE4BC22D95D010007E43A /* AppDelegate.swift */,
 				F4CAE4C022D95D0C0007E43A /* CVD.swift */,
 				F4CAE4C422D95D0D0007E43A /* EULA.swift */,
@@ -168,6 +177,7 @@
 		3F6627BBE448A2F8D7A7CA24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */,
 				F43C384A22DD1F64001400F8 /* SSZipArchive.framework */,
 				F43C384122DA4F68001400F8 /* Alamofire.framework */,
 				F43C384322DA4F68001400F8 /* AlamofireImage.framework */,
@@ -329,6 +339,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -337,6 +348,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47C154622DFBC7D00A76942 /* Pod.swift in Sources */,
+				F424F2F622E244EE0083B048 /* HomeVC.swift in Sources */,
 				F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */,
 				F4CAE4EA22D95D410007E43A /* SelectProduct.swift in Sources */,
 				F4CAE4E422D95D400007E43A /* StartV2.swift in Sources */,
@@ -359,6 +372,7 @@
 				F4CAE4F122D95D480007E43A /* VehicleData.swift in Sources */,
 				F4CAE4C622D95D0D0007E43A /* Extensions.swift in Sources */,
 				F4CAE4F422D95D480007E43A /* Vehicles.swift in Sources */,
+				F49BCC2A22DFCC04003F1754 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

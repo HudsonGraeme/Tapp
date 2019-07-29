@@ -140,6 +140,7 @@ extension Vehicles {
 
 
 
+
 //
 
 // To parse values from Alamofire responses:
@@ -190,7 +191,9 @@ class Response: Codable {
     
     let backseatTokenUpdatedAt: JSONNull?
     
+    var image: NSImage?
     
+    var data: VehicleData?
     
     enum CodingKeys: String, CodingKey {
         

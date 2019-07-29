@@ -42,10 +42,13 @@ class Login: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let group = DispatchGroup()
+        
         self.view.layer!.cornerRadius = 10.0
         // 1. Contact Carspotter and compare versions (42-59)
         Alamofire.request(URL(string: "http://api.carspotter.ca/index.php/Applications?transform=1")!).responseVersion { (response) in
-            
+            group.enter()
             let versionReadable = (Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! NSString)
             let version = NumberFormatter().number(from: versionReadable.replacingCharacters(in: NSRange(location: 3, length: 1), with: ""))!.doubleValue
             
@@ -121,20 +124,22 @@ class Login: NSViewController {
                         self.view.window!.setIsVisible(true)
                     }
                 }
+                group.leave()
             }
         }
         // 1. Complete
         
         // 2A. Check if there is a saved access token (TRUE)
-        do {
-            guard let token = try keychain.get("token") else {
-                throw NSError(domain: "self", code: 403, userInfo: nil)
-            }
-            getVehicles(token)
+        group.notify(queue: .main) {
+            do {
+                guard let token = try self.keychain.getString(UserDefaults.standard.string(forKey: "userEmail") ?? "token") else {
+                    throw NSError(domain: "self", code: 403, userInfo: nil)
+                }
+                self.getVehicles(token)
             } catch {
-                print("caught")
+                print("No saved token")
             }
-        
+        }
         
     }
     
@@ -151,22 +156,80 @@ class Login: NSViewController {
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        //let selectController = segue.destinationController as! SelectVehicle
-        //Explain what's going on to SelectVehicle
+        let menuController = (segue.destinationController as! SplitView).children[0] as! MenuController
+        //Explain what's going on to Menu
+        menuController.vehicles = self.vehicleResponse
     }
     
     
     
     @IBOutlet weak var TappText: NSTextField!
-    @IBOutlet weak var Background: NSVisualEffectView!
+    @IBOutlet weak var EmailField: NSTextField!
+    @IBOutlet weak var PasswordField: NSTextField!
+    @IBOutlet weak var LoginButton: NSButton!
+    @IBOutlet weak var StayLoggedInCheckBox: NSButton!
     
+    
+    @IBOutlet weak var Background: NSVisualEffectView!
+    var vehicleResponse: Vehicles? = nil
     
     
     func getVehicles(_ token:String) {
+        
+        /*Alamofire.request(URL(string: "https://apps.carspotter.ca/Tapp/TestData")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: [:]).responseVehicles { (response) in
+            if(response.error == nil) {
+                self.vehicleResponse = response.result.value
+                
+                self.performSegue(withIdentifier: "toMain", sender: self)
+                self.view.window!.close()
+            } else {
+                print(response.error!)
+            }
+         
+        }*/
+    
+        
+        
         Alamofire.request(URL(string: "https://owner-api.teslamotors.com/api/1/vehicles")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "Bearer \(token)"]).responseVehicles { (response) in
+            if(response.error == nil) {
+                self.vehicleResponse = response.result.value
+                self.performSegue(withIdentifier: "toMain", sender: self)
+                self.view.window!.close()
+            } else {
+                print(response.error!)
+            }
             
+            }.responseJSON { (resp) in
+                print(resp)
         }
     }
     
+    func PerformLogin(_ Email: String, _ Password: String) {
+        let params : Parameters = ["grant_type":"password","client_id":"81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384","client_secret":"c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3","email":Email,"password":Password]
+        Alamofire.request("https://owner-api.teslamotors.com/oauth/token", method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: [:]).responseAuthentication { (response) in
+            
+            if(response.error == nil) {
+                if let token = response.result.value?.accessToken {
+                    do {
+                        try self.keychain.set(token,key: Email)
+                        UserDefaults.standard.set(Email, forKey: "userEmail")
+                        self.getVehicles(token)
+                    } catch {
+                        print("error setting token")
+                    }
+                }
+            } else {
+                print(response.error!)
+            }
+            }
+    }
+    
+    @IBAction func LoginButton(_ sender: Any) {
+        if(self.EmailField.stringValue.isEmpty || self.PasswordField.stringValue.isEmpty) {
+            print("error")
+        } else if (!self.EmailField.stringValue.isEmpty && !self.PasswordField.stringValue.isEmpty) {
+            PerformLogin(self.EmailField.stringValue, self.PasswordField.stringValue)
+        }
+    }
     
 }

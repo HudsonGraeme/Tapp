@@ -32,10 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
         NSApplication.shared.registerForRemoteNotifications(matching: .alert)
     }
 
+    func applicationDidResignActive(_ notification: Notification) {
+        
+    }
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         exit(0);
     }
