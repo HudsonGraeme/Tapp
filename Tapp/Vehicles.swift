@@ -163,7 +163,7 @@ extension Vehicles {
 
 class Response: Codable {
     
-    let id: Double
+    let id: Int
     
     let vehicleID: Int
     
@@ -229,7 +229,7 @@ class Response: Codable {
     
     
     
-    init(id: Double, vehicleID: Int, vin: String, displayName: String, optionCodes: String, color: JSONNull?, tokens: [String], state: String, inService: Bool, idS: String, calendarEnabled: Bool, apiVersion: Int, backseatToken: JSONNull?, backseatTokenUpdatedAt: JSONNull?) {
+    init(id: Int, vehicleID: Int, vin: String, displayName: String, optionCodes: String, color: JSONNull?, tokens: [String], state: String, inService: Bool, idS: String, calendarEnabled: Bool, apiVersion: Int, backseatToken: JSONNull?, backseatTokenUpdatedAt: JSONNull?) {
         
         self.id = id
         
@@ -305,7 +305,7 @@ extension Response {
     
     func with(
         
-        id: Double? = nil,
+        id: Int? = nil,
         
         vehicleID: Int? = nil,
         

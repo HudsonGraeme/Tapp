@@ -35,6 +35,7 @@ import Cocoa
 import Alamofire
 import KeychainAccess
 import SSZipArchive
+import SwiftWebSocket
 
 class Login: NSViewController {
     
@@ -189,10 +190,11 @@ class Login: NSViewController {
         }*/
     
         
-        
+
         Alamofire.request(URL(string: "https://owner-api.teslamotors.com/api/1/vehicles")!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": "Bearer \(token)"]).responseVehicles { (response) in
             if(response.error == nil) {
                 self.vehicleResponse = response.result.value
+                headers = ["Authorization": "Bearer \(token)"]
                 self.performSegue(withIdentifier: "toMain", sender: self)
                 self.view.window!.close()
             } else {
@@ -202,6 +204,11 @@ class Login: NSViewController {
             }.responseJSON { (resp) in
                 print(resp)
         }
+    
+        
+       
+        
+        
     }
     
     func PerformLogin(_ Email: String, _ Password: String) {

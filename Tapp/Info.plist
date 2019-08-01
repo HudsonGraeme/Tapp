@@ -33,6 +33,12 @@
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2019 © Spencer Graham</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Used to tell the Tesla server how far away you are from your vehicle (Required for Summon and Homelink capabilites)</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Used to tell the Tesla server how far away you are from your vehicle (Required for Summon and Homelink capabilites)</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Used to tell the Tesla server how far away you are from your vehicle (Required for Summon and Homelink capabilites)</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>

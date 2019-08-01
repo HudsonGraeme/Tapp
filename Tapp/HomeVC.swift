@@ -10,266 +10,98 @@ import Foundation
 import Cocoa
 import Alamofire
 import CoreGraphics
-
-let disabledButtonColour = CGColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1)
-let highlightButtonColour = CGColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1)
-let offButtonColour = CGColor(red: 2.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 0.0)
-let OnButtonColour = CGColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1)
-
-typealias colorscheme = (foreground: NSColor, background: CGColor)
+import SwiftWebSocket
+import CoreLocation
 
 
 
-
-extension NSBezierPath {
-    
-    public var cgPath: CGPath {
-        let path = CGMutablePath()
-        var points = [CGPoint](repeating: .zero, count: 3)
-        
-        for i in 0 ..< self.elementCount {
-            let type = self.element(at: i, associatedPoints: &points)
-            switch type {
-            case .moveTo:
-                path.move(to: points[0])
-            case .lineTo:
-                path.addLine(to: points[0])
-            case .curveTo:
-                path.addCurve(to: points[2], control1: points[0], control2: points[1])
-            case .closePath:
-                path.closeSubpath()
-            default:
-                path.closeSubpath()
-            }
-        }
-        
-        return path
-    }
-}
-
-extension NSImage {
-    func tint(color: NSColor) -> NSImage {
-        let image = self.copy() as! NSImage
-        image.lockFocus()
-        
-        color.set()
-        
-        let imageRect = NSRect(origin: NSZeroPoint, size: image.size)
-        imageRect.fill(using: .sourceAtop)
-        
-        image.unlockFocus()
-        
-        return image
-    }
-}
-
-enum NotificationType {
-    case success
-    case warn
-    case error
-    case info
-}
-
-extension NSView {
-    
-    
-    func presentNotification(withType type: NotificationType, withMessage message: String) {
-        let NotificationView = NSView(frame: NSRect(x: 0, y: self.bounds.height - 80, width: self.bounds.width, height: 40))
-        NotificationView.center = NSPoint(x: self.center.x, y: self.bounds.maxY-20)
-        let textView = NSTextField()
-        textView.setFrameSize(NSSize(width: self.frame.width - 80, height: 40))
-        textView.frame.origin.x = NotificationView.bounds.origin.x+40
-        textView.frame.origin.y = NotificationView.bounds.origin.y-10
-        textView.stringValue = message
-        textView.backgroundColor = .clear
-        textView.drawsBackground = false
-        textView.isBordered = false
-        textView.font = NSFont(name: "Arial", size: 15.0)
-        textView.alignment = .center
-        textView.textColor = .white
-        textView.alphaValue = 1.0
-        let iconView = NSImageView()
-        iconView.frame.origin = NSPoint(x: NotificationView.bounds.origin.x+5, y: NotificationView.bounds.origin.y)
-        iconView.setFrameSize(NSSize(width: 40, height: 40))
-        NotificationView.wantsLayer = true
-        switch(type) {
-        case .success:
-            NotificationView.layer!.backgroundColor = NSColor.systemGreen.cgColor
-            iconView.image = NSImage(named: NSImage.statusAvailableName)
-        case .info:
-            NotificationView.layer!.backgroundColor = NSColor.systemGray.cgColor
-            iconView.image = NSImage(named: NSImage.infoName)
-        case .warn:
-            NotificationView.layer!.backgroundColor = NSColor.systemOrange.cgColor
-            iconView.image = NSImage(named: NSImage.cautionName)
-        default:
-            NotificationView.layer!.backgroundColor = NSColor.systemRed.cgColor
-            iconView.image = NSImage(named: NSImage.cautionName)
-        }
-        NotificationView.layer!.backgroundColor = NotificationView.layer!.backgroundColor?.copy(alpha: 0.5)
-        print(textView.frame,iconView.frame,NotificationView.frame)
-        NotificationView.addSubview(textView)
-        NotificationView.addSubview(iconView)
-        self.addSubview(NotificationView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            NSAnimationContext.runAnimationGroup({ (context) in
-                context.duration = 3.5
-                NotificationView.animator().alphaValue = 0.0
-            }, completionHandler: {
-                NotificationView.removeFromSuperview()
-            })
-        }
-       
-        
-    }
-    
-    func centerInSuperview(superview withSuperview: NSView?) {
-        var superview = self.superview
-        if(withSuperview != nil) {
-            superview = withSuperview
-        }
-        self.frame.origin = NSPoint(x: superview!.bounds.midX - self.frame.width / 2, y: superview!.bounds.midY-self.frame.height/2)
-    }
-    
-    var center: NSPoint {
-        get {
-            let centerX = self.frame.origin.x + (self.frame.size.width / 2)
-            let centerY = self.frame.origin.y + (self.frame.size.height / 2)
-            return NSPoint(x: centerX, y: centerY)
-        }
-        set {
-            self.frame.origin.x = newValue.x - (self.frame.size.width / 2)
-            self.frame.origin.y = newValue.y - (self.frame.size.height / 2)
-        }
-    }
-    
-    
-    
-    func buildRect(inView view: NSView, _ buttons: [NSButton], withTarget target: AnyObject?, withSelector selector: Selector, customSpacing spacing: CGFloat?) {
-        
-        let path = NSBezierPath(roundedRect: view.bounds, xRadius: 15, yRadius: 15)
-        //path.windingRule = .evenOdd
-        var buttonsPerColumn: CGFloat = 1
-        while ((CGFloat(buttons.count)/buttonsPerColumn*(view.frame.width/CGFloat(buttons.count))) >= view.frame.width) {
-            buttonsPerColumn += 1
-        }
-        
-        let buttonsPerRow = CGFloat(buttons.count) / buttonsPerColumn
-        let maxX = buttonsPerRow*(view.frame.width/buttonsPerRow)
-        print(maxX)
-        var buttonGrid = [[NSButton]]()
-        for i in 0..<Int(buttonsPerRow) {
-            var buttonsInRow = [NSButton]()
-            for x in 0..<Int(buttonsPerColumn)
-            {
-                buttonsInRow.append(buttons[(x*2)+i])
-            }
-            buttonGrid.append(buttonsInRow)
-        }
-        
-       
-        for buttonsArr in buttonGrid {
-            for button in buttonsArr {
-                button.setFrameOrigin(view.frame.origin)
-                if(spacing != nil) {
-                    let offset = NSPoint(x: view.frame.width/spacing!, y: view.frame.height/spacing!)
-                    let x = spacing!*(CGFloat(buttonGrid.firstIndex(of: buttonsArr)!))*(view.frame.width/buttonsPerRow)
-                    let y = (CGFloat(buttonsArr.firstIndex(of: button)!)*view.frame.height/buttonsPerColumn)
-                    button.center.x = x+offset.x
-                    button.center.y = y+offset.y
-                    
-                } else {
-                    let offset = NSPoint(x: view.frame.width/buttonsPerRow/buttonsPerColumn, y: view.frame.height/buttonsPerColumn/buttonsPerRow)
-                    let x = (CGFloat(buttonGrid.firstIndex(of: buttonsArr)!)*(view.frame.width/buttonsPerRow))
-                    let y = (CGFloat(buttonsArr.firstIndex(of: button)!)*view.frame.height/buttonsPerColumn)
-                button.center = NSPoint(x: x+offset.x, y: y+offset.y)
-                }
-                print(button.center)
-                if let img = button.image {
-                button.image = nil
-                button.standardize(withImage: img, withSuperView: view)
-                } else {
-                   button.standardize(withImage: #imageLiteral(resourceName: "lightning"), withSuperView: view)
-                }
-                self.addSubview(button)
-                let bpath = NSBezierPath(ovalIn: button.frame)
-                path.append(bpath)
-                button.center.x += view.frame.minX - self.frame.minX
-                button.center.y += view.frame.minY - self.frame.minY
-                //button.setButtonType(.onOff)
-                button.target = target
-                button.action = selector
-            }
-        }
-        
-        let fillLayer = CAShapeLayer()
-        fillLayer.frame = view.bounds
-        fillLayer.path = path.cgPath
-        fillLayer.fillRule = .evenOdd
-        fillLayer.fillColor = .black
-        fillLayer.opacity = 0.5
-        view.layer = fillLayer
-        self.addSubview(view)
-    }
-}
-
-
-extension NSButton {
-    
-    func setColor(_ colorscheme: colorscheme) {
-        for view in self.subviews {
-            if let imageView = view as? NSImageView {
-                imageView.image = imageView.image?.tint(color: colorscheme.foreground)
-            }
-        }
-        self.layer!.backgroundColor = colorscheme.background
-    }
-    
-    func standardize(withImage image: NSImage, withSuperView view: NSView) {
-        
-        self.subviews.removeAll()
-        self.bezelColor = .clear
-        self.wantsLayer = true
-        self.layer!.isOpaque = false
-        self.layer!.cornerRadius = (self.frame.width / 2) - 2
-        self.layer!.backgroundColor = offButtonColour
-        self.bezelStyle = .circular
-        self.isBordered = false
-        let imageSubview = NSImageView()
-        imageSubview.setFrameSize(NSSize(width: self.bounds.width-10,height: self.bounds.height-10))
-        imageSubview.centerInSuperview(superview: self)
-        imageSubview.image = image
-        self.addSubview(imageSubview)
-        let enterExitArea = NSTrackingArea(rect: self.bounds,
-                                       options: [.mouseEnteredAndExited,  .activeAlways],
-                                       owner: self,
-                                       userInfo: ["Button":self])
-        self.addTrackingArea(enterExitArea)
-        self.imagePosition = .imageOnly
-
-    }
-    
-    
 /*
-     ORIGINAL
-        NSRect(x: 35+(radius*2), y: ControlRect.height - (ButtonRect.height*2 + 30), width:  2*radius+10, height: 2*radius+10)
-     HOLE
-        NSRect(x: 35+(radius*2), y: ControlRect.height - (ButtonRect.height*2 + 30), width:  2*radius+10, height: 2*radius+10)
-     
-     
+ var Socketrequest = URLRequest(url: URL(string:"wss://streaming.vn.teslamotors.com/connect/\(self.vehicles!.response[0].vehicleID)")!)
+ var auth = "bugrocco@gmail.com:\(self.vehicles!.response[0].tokens[0])"
+ auth = auth.base64Encoded()!
+ request.addValue("Basic \(auth)", forHTTPHeaderField: "Authorization")
+ request.addValue("* / *", forHTTPHeaderField: "Accept")
+request.addValue("SGVsbG8sIHevcmxkIQ==", forHTTPHeaderField: "Sec-WebSocket-Key")
+request.addValue("13", forHTTPHeaderField: "Sec-WebSocket-Version")
+request.addValue("Upgrade", forHTTPHeaderField: "Connection")
+request.addValue("websocket", forHTTPHeaderField: "Upgrade")
+request.addValue("streaming.vn.teslamotors.com", forHTTPHeaderField: "Host")
+request.addValue("wss://streaming.vn.teslamotors.com", forHTTPHeaderField: "Origin")
+
+let ws = WebSocket(request: request)
+
+ws.event.open = {
+    print("opened")
+    ws.send("{\"msg_type\":\"autopark:cmd_forward\", \"latitude\":43.193519, \"longitude\": -79.821651}")
+    let queue = DispatchQueue(label: "\(Bundle.main.bundleIdentifier!).HeartBeat")  // you can also use `DispatchQueue.main`, if you want
+    let timer = DispatchSource.makeTimerSource(queue: queue)
+    timer.scheduleRepeating(deadline: .now(), interval: .seconds(1))
+    timer.setEventHandler { [weak self] in
+        ws.send("{\"msg_type\":\"autopark:heartbeat_app\", \"timestamp\":\(NSTimeIntervalSince1970)}")
+    }
+    timer.resume()
+}
+ws.event.error = { error in
+    print(error)
+    
+}
+var messageCount = 0
+ws.event.message = { message in
+    if let string = String(bytes: message as! [UInt8], encoding: .utf8) {
+        print(string)
+    } else {
+        print("not a valid UTF-8 sequence")
+    }
+    messageCount += 1
+    if(messageCount > 3 && messageCount < 5) {
+        ws.send("{\"msg_type\":\"control:ping\", \"timestamp\":\(NSTimeIntervalSince1970)}")
+        //ws.send("{\"msg_type\":\"autopark:cmd_forward\", \"latitude\":43.193519, \"longitude\": -79.821651}")
+    }
+}
+ws.open()
+ 
  */
 
 
 
-}
 
-
-class HomeVC : NSViewController {
+class HomeVC : NSViewController, CLLocationManagerDelegate {
     
+    
+    // WebSocket Stuff
+    
+    var socketRequest: URLRequest? = nil
+    var auth: String? = nil
+    var ws = WebSocket()
+    let timer = DispatchSource.makeTimerSource(queue: .main)
+    
+    var vehicles: Vehicles? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //More Websocket stuff
+        socketRequest = URLRequest(url: URL(string:"wss://streaming.vn.teslamotors.com/connect/\(self.vehicles!.response[0].vehicleID)")!)
+        auth = "bugrocco@gmail.com:\(self.vehicles!.response[0].tokens[0])".base64Encoded()!
+        
 
+        socketRequest!.addValue("Basic \(auth!)", forHTTPHeaderField: "Authorization")
+        socketRequest!.addValue("* / *", forHTTPHeaderField: "Accept")
+        socketRequest!.addValue("SGVsbG8sIHevcmxkIQ==", forHTTPHeaderField: "Sec-WebSocket-Key")
+        socketRequest!.addValue("13", forHTTPHeaderField: "Sec-WebSocket-Version")
+        socketRequest!.addValue("Upgrade", forHTTPHeaderField: "Connection")
+        socketRequest!.addValue("websocket", forHTTPHeaderField: "Upgrade")
+        socketRequest!.addValue("streaming.vn.teslamotors.com", forHTTPHeaderField: "Host")
+        socketRequest!.addValue("wss://streaming.vn.teslamotors.com", forHTTPHeaderField: "Origin")
+        
+        /*.request(URL(string: "https://owner-api.teslamotors.com/api/1/vehicles/\(vehicles!.response[0].id)/wake_up")!, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            print(response)
+            }.response { (response) in
+                print(response)
+        }*/
+        
+        
+        
         print("View Frame: \(self.view.frame)")
         
         let ControlRect = NSRect(x: self.view.frame.minX + 30, y: self.view.frame.maxY - 240, width: 140, height: 160)
@@ -301,10 +133,86 @@ class HomeVC : NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
+         ws = WebSocket(request: socketRequest!)
+        
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    
+    @IBAction func sumFwd(_ sender: Any) {
+        self.ws.event.open = {
+            print("opened")
+        }
+        self.ws.event.error = { error in
+            print(error)
+            
+        }
+        var messageCount = 0
+        self.ws.event.message = { message in
+            
+            
+            if let string = String(bytes: message as! [UInt8], encoding: .utf8) {
+                
+                if let statemsg = try? StreamStateMessage(string) {
+                    print("State: ", statemsg.autoparkState, "\t", statemsg.autoparkStateReason)
+                } else if let heartbeatmsg = try? StreamHeartbeat(string) {
+                    print("Heartbeat: ", heartbeatmsg.carTimestamp, "\t", heartbeatmsg.timestamp)
+                } else if let movemsg = try? StreamMoveData(string) {
+                    print("Shift State:", movemsg.shiftState, "\nLocation: ", movemsg.latitude, ", ", movemsg.longitude, "\nHeading: ", movemsg.heading)
+                    
+                } else if let hellomsg = try? HelloMessage(string) {
+                    print("Server Hello: Timeout \(hellomsg.connectionTimeout)ms\nAutopark Heartbeat Frequency: \(hellomsg.autopark.heartbeatFrequency)\nAutopark Pause Timeout: \(hellomsg.autopark.autoparkPauseTimeout)\n Autopark Stop Timeout: \(hellomsg.autopark.autoparkStopTimeout)")
+                } else if let styleMsg = try? AutoparkStyle(string) {
+                    print("Style: ", styleMsg.autoparkStyle)
+                } else if let homelinkMsg = try? HomelinkMessage(string) {
+                    print("Homelink Nearby: \(homelinkMsg.homelinkNearby)")
+                    self.ws.send("{\"msg_type\":\"autopark:cmd_reverse\", \"latitude\":\(43.193428), \"longitude\": \(-79.821680)}")
+                } else {
+                 print(string)
+                }
+                
+                
+            } else {
+                print("not a valid UTF-8 sequence")
+            }
+            messageCount += 1
+        }
+        let manager = CLLocationManager()
+        manager.delegate = self
+    
+        manager.startUpdatingLocation()
+        manager.requestLocation()
+        //let lat = manager.location?.coordinate.latitude
+        //let long = manager.location?.coordinate.longitude
+        print(manager.location?.coordinate)
+        self.ws.open()
+        self.timer.schedule(deadline: .now() + .seconds(11), repeating: .milliseconds(1000))
+        self.timer.setEventHandler { [weak self] in
+            self!.ws.send("{\"msg_type\":\"autopark:heartbeat_app\", \"timestamp\":\(NSDate().timeIntervalSince1970*1000)}")
+        }
+        self.timer.resume()
+        
+    }
+    
+    @IBAction func StopSum(_ sender: Any) {
+        self.ws.send("{\"msg_type\":\"autopark:cmd_abort\"}")
+        self.timer.suspend()
+        ws.close()
+    }
+    
+    
+    
+    
     @objc func onButtonPress(_ sender: NSButton) {
+        
         
         
         if (sender.title == "Unlock") {
@@ -325,7 +233,7 @@ class HomeVC : NSViewController {
                 self.view.presentNotification(withType: .error, withMessage: "Could not flash vehicle lights")
                 sender.setColor((.white,offButtonColour))
             } else {
-                sender.setColor((.black,OnButtonColour))
+                sender.setColor((.white,highlightButtonColour))
             }
         }
         

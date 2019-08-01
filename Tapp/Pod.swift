@@ -49,6 +49,12 @@ class MenuController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     var vehicles: Vehicles? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        let Splitview = self.parent! as! SplitView
+        let TabView = Splitview.children[1] as! Pod
+        let Home = TabView.children[0] as! HomeVC
+        
+        
+        Home.vehicles = self.vehicles
         self.view.setFrameSize(NSSize(width: self.view.frame.width, height: super.view.frame.height))
         //self.view.wantsLayer = true
         //self.view.layer!.cornerRadius = 10.0

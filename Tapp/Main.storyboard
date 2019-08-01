@@ -334,6 +334,30 @@
                     <visualEffectView key="view" appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="light" state="active" id="m3j-H8-d5t">
                         <rect key="frame" x="0.0" y="0.0" width="586" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" id="d2o-za-oRH">
+                                <rect key="frame" x="113" y="427" width="150" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Summon forwards" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4lp-Vm-qHI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sumFwd:" target="5JF-Um-VKM" id="YVb-H4-zhx"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" id="lAM-qc-Mq2">
+                                <rect key="frame" x="113" y="394" width="150" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Stop &amp; Disconnect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xz0-gm-i9z">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="StopSum:" target="5JF-Um-VKM" id="Nnx-Xv-A43"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </visualEffectView>
                 </viewController>
                 <customObject id="bIP-1d-xIV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

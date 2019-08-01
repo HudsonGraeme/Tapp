@@ -15,6 +15,8 @@
 		F43C384B22DD1F64001400F8 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C384A22DD1F64001400F8 /* SSZipArchive.framework */; };
 		F47C154622DFBC7D00A76942 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4CC22D95D230007E43A /* Pod.swift */; };
 		F48CBF6022EF84380018D8A6 /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */; };
+		F48CBF6222F21E780018D8A6 /* StreamMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CBF6122F21E780018D8A6 /* StreamMessage.swift */; };
+		F48CBF6422F225A10018D8A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48CBF6322F225A10018D8A6 /* MapKit.framework */; };
 		F49BCC2A22DFCC04003F1754 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BCC2922DFCC04003F1754 /* Authentication.swift */; };
 		F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AF622F22A1994E001A4332 /* KeychainAccess.framework */; };
 		F4CAE4BE22D95D010007E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAE4BC22D95D010007E43A /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		F43C384A22DD1F64001400F8 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45D410F22160228001687B2 /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48CBF6122F21E780018D8A6 /* StreamMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamMessage.swift; sourceTree = "<group>"; };
+		F48CBF6322F225A10018D8A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F49BCC2922DFCC04003F1754 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		F4AF622F22A1994E001A4332 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CAE4BB22D95D000007E43A /* Tapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tapp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			files = (
 				F48CBF6022EF84380018D8A6 /* SwiftWebSocket.framework in Frameworks */,
 				F43C384B22DD1F64001400F8 /* SSZipArchive.framework in Frameworks */,
+				F48CBF6422F225A10018D8A6 /* MapKit.framework in Frameworks */,
 				F4AF623022A1994E001A4332 /* KeychainAccess.framework in Frameworks */,
 				F4FEF56E221462B900D664C4 /* SwiftyJSON.framework in Frameworks */,
 				24CE558F1FFAD32D009DE9E3 /* Alamofire.framework in Frameworks */,
@@ -127,6 +132,7 @@
 				F4CAE4D922D95D3B0007E43A /* StartV2.swift */,
 				F4CAE4CC22D95D230007E43A /* Pod.swift */,
 				F43BA85D22DF7622008EEEC6 /* Main.storyboard */,
+				F48CBF6122F21E780018D8A6 /* StreamMessage.swift */,
 				F4CAE4EE22D95D460007E43A /* TstData.JSON */,
 				F4CAE4ED22D95D460007E43A /* VehicleData.swift */,
 				F4CAE4F022D95D470007E43A /* Vehicles.swift */,
@@ -177,6 +183,7 @@
 		3F6627BBE448A2F8D7A7CA24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F48CBF6322F225A10018D8A6 /* MapKit.framework */,
 				F48CBF5F22EF84380018D8A6 /* SwiftWebSocket.framework */,
 				F43C384A22DD1F64001400F8 /* SSZipArchive.framework */,
 				F43C384122DA4F68001400F8 /* Alamofire.framework */,
@@ -266,6 +273,9 @@
 								enabled = 1;
 							};
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.Mac = {
 								enabled = 1;
 							};
 							com.apple.Push = {
@@ -373,6 +383,7 @@
 				F4CAE4C622D95D0D0007E43A /* Extensions.swift in Sources */,
 				F4CAE4F422D95D480007E43A /* Vehicles.swift in Sources */,
 				F49BCC2A22DFCC04003F1754 /* Authentication.swift in Sources */,
+				F48CBF6222F21E780018D8A6 /* StreamMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
