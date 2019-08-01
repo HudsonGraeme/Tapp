@@ -35,4 +35,21 @@ If you like what I do and want to invest in my app development, I have Patreon a
 
 <a href="https://www.patreon.com/OSXSpencer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Patreon_logomark.svg/1024px-Patreon_logomark.svg.png" data-canonical-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Patreon_logomark.svg/1024px-Patreon_logomark.svg.png" width="250" height="250"/></a> <a href="https://www.paypal.me/SpencerGraham"><img src="https://vcf-uk.org/wp-content/uploads/2015/04/PayPal-Logo-Vector-Image.png" data-canonical-src="https://vcf-uk.org/wp-content/uploads/2015/04/PayPal-Logo-Vector-Image.png" width="400" height="250"  /></a>
 
+## Icon Attributions
+
+All Icons were modified from their original form in order to suit the application theme.
+
+* Tesla Supercharger by Ervin Bolat from the Noun Project
+* schedule by Markus from the Noun Project
+* Unlock and Lock by shashank singh from the Noun Project
+* Key Battery Low by BomSymbols from the Noun Project
+* Headlight by ProSymbols from the Noun Project
+* Horn by Lloyd Humphreys from the Noun Project
+* Home by My Toley from the Noun Project
+* Power by David from the Noun Project
+* Music by Arnaldo Cabeza from the Noun Project
+* Thermometer by Becris from the Noun Project
+* Location by DIVYA A from the Noun Project
+* valet by Baboon designs from the Noun Project
+
 Copyright © 2019 Spencer Graham
