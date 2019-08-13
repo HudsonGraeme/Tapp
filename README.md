@@ -51,5 +51,6 @@ All Icons were modified from their original form in order to suit the applicatio
 * Thermometer by Becris from the Noun Project
 * Location by DIVYA A from the Noun Project
 * valet by Baboon designs from the Noun Project
+* Steering Wheel by Marc Anderson from the Noun Project
 
 Copyright © 2019 Spencer Graham
